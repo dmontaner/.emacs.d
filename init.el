@@ -216,146 +216,146 @@
 
 
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;; PYTHON
+;; ;;; PYTHON
 
-;; elpy dependency just for the configuration ??? may be I do not need it
-(setq load-path
-      (append '("~/.emacs.d/downloaded_from_github/exec-path-from-shell/")
-	      load-path))
+;; ;; elpy dependency just for the configuration ??? may be I do not need it
+;; (setq load-path
+;;       (append '("~/.emacs.d/downloaded_from_github/exec-path-from-shell/")
+;; 	      load-path))
 
-(require 'exec-path-from-shell)
-(exec-path-from-shell-copy-env "PATH") ;; exec-path-from-shell (must go before elpy for ipython)
+;; (require 'exec-path-from-shell)
+;; (exec-path-from-shell-copy-env "PATH") ;; exec-path-from-shell (must go before elpy for ipython)
 
-;; all elpy dependencies
-(setq load-path
-      (append '("~/.emacs.d/downloaded_from_github/exec-path-from-shell/"
-		"~/.emacs.d/downloaded_from_github/s.el/"
-		"~/.emacs.d/downloaded_from_github/pyvenv/"
-		"~/.emacs.d/downloaded_from_github/company-mode/"
-		"~/.emacs.d/downloaded_from_github/Highlight-Indentation-for-Emacs/"
-		"~/.emacs.d/downloaded_from_github/yasnippet/"
-		"~/.emacs.d/downloaded_from_github/elpy/")
-              load-path))
-(require 'elpy)
+;; ;; all elpy dependencies
+;; (setq load-path
+;;       (append '("~/.emacs.d/downloaded_from_github/exec-path-from-shell/"
+;; 		"~/.emacs.d/downloaded_from_github/s.el/"
+;; 		"~/.emacs.d/downloaded_from_github/pyvenv/"
+;; 		"~/.emacs.d/downloaded_from_github/company-mode/"
+;; 		"~/.emacs.d/downloaded_from_github/Highlight-Indentation-for-Emacs/"
+;; 		"~/.emacs.d/downloaded_from_github/yasnippet/"
+;; 		"~/.emacs.d/downloaded_from_github/elpy/")
+;;               load-path))
+;; (require 'elpy)
 
-(setq elpy-remove-modeline-lighter nil) ;; do not hide modeline, call before elpy-enable
+;; (setq elpy-remove-modeline-lighter nil) ;; do not hide modeline, call before elpy-enable
 
-(elpy-enable)
+;; (elpy-enable)
 
-(setq elpy-rpc-backend "jedi")
+;; (setq elpy-rpc-backend "jedi")
 
-(define-key elpy-mode-map (kbd "C-c C-n") 'elpy-shell-send-current-statement)
-(define-key elpy-mode-map (kbd "C-c C-b") 'elpy-shell-send-region-or-buffer)
-(define-key elpy-mode-map (kbd "C-c C-r") 'elpy-shell-send-region-or-buffer)
+;; (define-key elpy-mode-map (kbd "C-c C-n") 'elpy-shell-send-current-statement)
+;; (define-key elpy-mode-map (kbd "C-c C-b") 'elpy-shell-send-region-or-buffer)
+;; (define-key elpy-mode-map (kbd "C-c C-r") 'elpy-shell-send-region-or-buffer)
 
-(when (executable-find "ipython3")
-  (setenv "IPY_TEST_SIMPLE_PROMPT" "1")
-  (elpy-use-ipython "ipython3"))
-
-;; (when (executable-find "ipython2")
+;; (when (executable-find "ipython3")
 ;;   (setenv "IPY_TEST_SIMPLE_PROMPT" "1")
-;;   (elpy-use-ipython "ipython2"))
+;;   (elpy-use-ipython "ipython3"))
 
-;; ;;(setq elpy-modules nil)
-;; (setq elpy-modules elpy-mode)
+;; ;; (when (executable-find "ipython2")
+;; ;;   (setenv "IPY_TEST_SIMPLE_PROMPT" "1")
+;; ;;   (elpy-use-ipython "ipython2"))
 
-;; ;;(elpy-enable)
-;; ;;(elpy-enable)
-;; ;;(add-to-list 'auto-mode-alist '("\\.py\\'" . elpy-mode))  ;; no se por que necesito esto
+;; ;; ;;(setq elpy-modules nil)
+;; ;; (setq elpy-modules elpy-mode)
 
-
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;;; SCALA
-
-(setq load-path
-      (append '("~/.emacs.d/downloaded_from_github/dash.el/"
-		"~/.emacs.d/downloaded_from_github/emacs-scala-mode/"
-		"~/.emacs.d/downloaded_from_github/emacs-sbt-mode"
-		"~/.emacs.d/downloaded_from_github/ensime-emacs/")
-	      load-path))
-
-(require 'ensime)
-
+;; ;; ;;(elpy-enable)
+;; ;; ;;(elpy-enable)
+;; ;; ;;(add-to-list 'auto-mode-alist '("\\.py\\'" . elpy-mode))  ;; no se por que necesito esto
 
 
 
 
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; ;; Added by Package.el.  This must come before configurations of
-;; ;; installed packages.  Don't delete this line.  If you don't want it,
-;; ;; just comment it out by adding a semicolon to the start of the line.
-;; ;; You may delete these explanatory comments.
-;; (package-initialize)
+;; ;;; SCALA
 
-;; (load "~/.emacs.d/my-loadpackages.el")
-;; ;; (add-hook 'after-init-hook '(lambda ()
-;; ;; 			      (load "~/.emacs.d/my-noexternals.el")))
+;; (setq load-path
+;;       (append '("~/.emacs.d/downloaded_from_github/dash.el/"
+;; 		"~/.emacs.d/downloaded_from_github/emacs-scala-mode/"
+;; 		"~/.emacs.d/downloaded_from_github/emacs-sbt-mode"
+;; 		"~/.emacs.d/downloaded_from_github/ensime-emacs/")
+;; 	      load-path))
 
-
-;; ;; SCROLLING IN TERM
-;; (if (eq window-system nil)
-;;     (let ((map (make-sparse-keymap)))
-;;       (define-key input-decode-map "\e[1;5A" [C-up])
-;;       (define-key input-decode-map "\e[1;5B" [C-down])
-;;       (define-key input-decode-map "\e[1;5C" [C-right])
-;;       (define-key input-decode-map "\e[1;5D" [C-left])))
-
-;; ;; ;; LINUM
-;; ;; (global-linum-mode t) ;; enable line numbers globally
-;; ;; (require 'linum-off)
-
-;; (put 'downcase-region 'disabled nil)
-
-;; ;; ;; conkeror
-;; ;; (if (executable-find "conkeror")
-;; ;;     (progn (setq browse-url-generic-program (executable-find "conkeror"))
-;; ;;            (setq browse-url-browser-function 'browse-url-generic)))
-
-;; (custom-set-variables
-;;  ;; custom-set-variables was added by Custom.
-;;  ;; If you edit it by hand, you could mess it up, so be careful.
-;;  ;; Your init file should contain only one such instance.
-;;  ;; If there is more than one, they won't work right.
-;;  '(package-selected-packages
-;;    (quote
-;;     (browse-url-dwim yafolding json-mode polymode markdown-mode ess zenburn-theme web-mode sphinx-doc solarized-theme scss-mode rvm readline-complete py-autopep8 magit flycheck exec-path-from-shell elpy ein better-defaults auto-complete auctex))))
-;; (custom-set-faces
-;;  ;; custom-set-faces was added by Custom.
-;;  ;; If you edit it by hand, you could mess it up, so be careful.
-;;  ;; Your init file should contain only one such instance.
-;;  ;; If there is more than one, they won't work right.
-;;  )
+;; (require 'ensime)
 
 
-;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-;; ;;;JSON
-;; ;; start yafolding-mode for JSON files
-;; (add-hook 'json-mode-hook
-;;           (lambda () (yafolding-mode)))
 
 
-;; ;;; browse urls
-;; (require 'browse-url-dwim)      ; load library
-;; (browse-url-dwim-mode 1)        ; install aliases and keybindings
 
-;; (custom-set-variables
-;;  ;; custom-set-variables was added by Custom.
-;;  ;; If you edit it by hand, you could mess it up, so be careful.
-;;  ;; Your init file should contain only one such instance.
-;;  ;; If there is more than one, they won't work right.
-;;  '(column-number-mode t)
-;;  '(cua-mode t nil (cua-base))
-;;  '(tool-bar-mode nil))
-;; (custom-set-faces
-;;  ;; custom-set-faces was added by Custom.
-;;  ;; If you edit it by hand, you could mess it up, so be careful.
-;;  ;; Your init file should contain only one such instance.
-;;  ;; If there is more than one, they won't work right.
-;;  )
+;; ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; ;; ;; Added by Package.el.  This must come before configurations of
+;; ;; ;; installed packages.  Don't delete this line.  If you don't want it,
+;; ;; ;; just comment it out by adding a semicolon to the start of the line.
+;; ;; ;; You may delete these explanatory comments.
+;; ;; (package-initialize)
+
+;; ;; (load "~/.emacs.d/my-loadpackages.el")
+;; ;; ;; (add-hook 'after-init-hook '(lambda ()
+;; ;; ;; 			      (load "~/.emacs.d/my-noexternals.el")))
+
+
+;; ;; ;; SCROLLING IN TERM
+;; ;; (if (eq window-system nil)
+;; ;;     (let ((map (make-sparse-keymap)))
+;; ;;       (define-key input-decode-map "\e[1;5A" [C-up])
+;; ;;       (define-key input-decode-map "\e[1;5B" [C-down])
+;; ;;       (define-key input-decode-map "\e[1;5C" [C-right])
+;; ;;       (define-key input-decode-map "\e[1;5D" [C-left])))
+
+;; ;; ;; ;; LINUM
+;; ;; ;; (global-linum-mode t) ;; enable line numbers globally
+;; ;; ;; (require 'linum-off)
+
+;; ;; (put 'downcase-region 'disabled nil)
+
+;; ;; ;; ;; conkeror
+;; ;; ;; (if (executable-find "conkeror")
+;; ;; ;;     (progn (setq browse-url-generic-program (executable-find "conkeror"))
+;; ;; ;;            (setq browse-url-browser-function 'browse-url-generic)))
+
+;; ;; (custom-set-variables
+;; ;;  ;; custom-set-variables was added by Custom.
+;; ;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;; ;;  ;; Your init file should contain only one such instance.
+;; ;;  ;; If there is more than one, they won't work right.
+;; ;;  '(package-selected-packages
+;; ;;    (quote
+;; ;;     (browse-url-dwim yafolding json-mode polymode markdown-mode ess zenburn-theme web-mode sphinx-doc solarized-theme scss-mode rvm readline-complete py-autopep8 magit flycheck exec-path-from-shell elpy ein better-defaults auto-complete auctex))))
+;; ;; (custom-set-faces
+;; ;;  ;; custom-set-faces was added by Custom.
+;; ;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;; ;;  ;; Your init file should contain only one such instance.
+;; ;;  ;; If there is more than one, they won't work right.
+;; ;;  )
+
+
+;; ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; ;; ;;;JSON
+;; ;; ;; start yafolding-mode for JSON files
+;; ;; (add-hook 'json-mode-hook
+;; ;;           (lambda () (yafolding-mode)))
+
+
+;; ;; ;;; browse urls
+;; ;; (require 'browse-url-dwim)      ; load library
+;; ;; (browse-url-dwim-mode 1)        ; install aliases and keybindings
+
+;; ;; (custom-set-variables
+;; ;;  ;; custom-set-variables was added by Custom.
+;; ;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;; ;;  ;; Your init file should contain only one such instance.
+;; ;;  ;; If there is more than one, they won't work right.
+;; ;;  '(column-number-mode t)
+;; ;;  '(cua-mode t nil (cua-base))
+;; ;;  '(tool-bar-mode nil))
+;; ;; (custom-set-faces
+;; ;;  ;; custom-set-faces was added by Custom.
+;; ;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;; ;;  ;; Your init file should contain only one such instance.
+;; ;;  ;; If there is more than one, they won't work right.
+;; ;;  )

@@ -3,7 +3,7 @@
 
 ;;; SET DEFAULT DICTIONARY
 ;(setq ispell-dictionary "american")
-;(setq ispell-dictionary "castellano8")
+(setq ispell-dictionary "castellano8")
 
 
 ;;; BASIC CUSTOMIZATION
@@ -115,9 +115,9 @@
 
 
 (add-to-list 'load-path "~/.emacs.d/downloaded_from_github/ESS/lisp") ;; ad one more path to the load-path variable
-;;(load "ess-site")  ;; THIS ADDS 0.7 sec to the starting... see if could be changed by autoload
+(load "ess-site")  ;; THIS ADDS 0.7 sec to the starting... see if could be changed by autoload
 
-(autoload 'R-mode "ess-site.el" "" t)
+;;(autoload 'R-mode "ess-site.el" "" t)
 (add-to-list 'auto-mode-alist '("\\.r\\'" . R-mode))
 (add-to-list 'auto-mode-alist '("\\.R\\'" . R-mode))
 (add-to-list 'auto-mode-alist '("\\.Rmd\\'" . R-mode)) ; I am not sure about this

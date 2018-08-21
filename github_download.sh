@@ -1,5 +1,5 @@
 #!/bin/bash
-# download_github.sh
+# github_download.sh
 # 2017-05-30 david.montaner@gmail.com
 # download all my github dependencies for emacs
 

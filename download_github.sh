@@ -1,6 +1,6 @@
 #!/bin/bash
 # download_github.sh
-# 2017-05-30 david.montaner@barclays.com
+# 2017-05-30 david.montaner@gmail.com
 # download all my github dependencies for emacs
 
 mkdir downloaded_from_github/

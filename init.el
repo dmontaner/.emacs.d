@@ -259,7 +259,8 @@
 
 (setq elpy-rpc-backend "jedi")
 
-(define-key elpy-mode-map (kbd "C-c C-n") 'elpy-shell-send-current-statement)
+;; (define-key elpy-mode-map (kbd "C-c C-n") 'elpy-shell-send-current-statement)
+(define-key elpy-mode-map (kbd "C-c C-n") 'elpy-shell-send-statement-and-step)
 (define-key elpy-mode-map (kbd "C-c C-b") 'elpy-shell-send-region-or-buffer)
 (define-key elpy-mode-map (kbd "C-c C-r") 'elpy-shell-send-region-or-buffer)
 

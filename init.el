@@ -263,6 +263,19 @@
 (define-key elpy-mode-map (kbd "C-c C-b") 'elpy-shell-send-region-or-buffer)
 (define-key elpy-mode-map (kbd "C-c C-r") 'elpy-shell-send-region-or-buffer)
 
+
+;; python version (interpreter)
+
+;; (setq python-shell-interpreter "python2"
+;;       python-shell-interpreter-args "-i")
+
+;; (setq python-shell-interpreter "python3"
+;;       python-shell-interpreter-args "-i")
+
+(setq python-shell-interpreter "ipython"
+      python-shell-interpreter-args "-i --simple-prompt")
+
+
 ;(setq elpy-rpc-python-command "python2")
 ; (setq elpy-rpc-python-command "pyspark")
 
@@ -270,9 +283,9 @@
 ;; ;  (setenv "IPY_TEST_SIMPLE_PROMPT" "1")
 ;;   (elpy-use-ipython "pyspark"))
 
-(when (executable-find "ipython3")
-  (setenv "IPY_TEST_SIMPLE_PROMPT" "1")
-  (elpy-use-ipython "ipython3"))
+;; (when (executable-find "ipython3")
+;;   (setenv "IPY_TEST_SIMPLE_PROMPT" "1")
+;;   (elpy-use-ipython "ipython3"))
 
 ;; (when (executable-find "ipython2")
 ;;   (setenv "IPY_TEST_SIMPLE_PROMPT" "1")
@@ -286,18 +299,16 @@
 ;; ;;(add-to-list 'auto-mode-alist '("\\.py\\'" . elpy-mode))  ;; no se por que necesito esto
 
 
-
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; SCALA
 
-(setq load-path
-      (append '("~/.emacs.d/downloaded_from_github/dash.el/"
-		"~/.emacs.d/downloaded_from_github/emacs-scala-mode/"
-		"~/.emacs.d/downloaded_from_github/emacs-sbt-mode"
-		"~/.emacs.d/downloaded_from_github/ensime-emacs/")
-	      load-path))
+;; (setq load-path
+;;       (append '("~/.emacs.d/downloaded_from_github/dash.el/"
+;; 		"~/.emacs.d/downloaded_from_github/emacs-scala-mode/"
+;; 		"~/.emacs.d/downloaded_from_github/emacs-sbt-mode"
+;; 		"~/.emacs.d/downloaded_from_github/ensime-emacs/")
+;; 	      load-path))
 
 ; (require 'ensime)
 
@@ -396,4 +407,3 @@
 ;; https://stackoverflow.com/questions/10026221/enable-all-disabled-commands-permanently
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
-

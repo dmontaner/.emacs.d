@@ -17,6 +17,14 @@
 (load-theme 'wombat t)
 (scroll-bar-mode -1)
 
+;; FONT
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 110 :width normal)))))
+
 (setq-default parens-require-spaces nil) ;; do not insert space before the parentheses when using the function "insert-parentheses"
 
 (setq require-final-newline nil)       ;; do not insert new lines at the end of the file when saving

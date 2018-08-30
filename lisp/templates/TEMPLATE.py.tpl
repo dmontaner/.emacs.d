@@ -1,5 +1,5 @@
 # (>>>FILE<<<)
-# (>>>ISO_DATE<<<) david.montaner@gmail.com
+# (>>>ISO_DATE<<<) david@insightcapital.io
 # (>>>COMMENT<<<)
 
 import os
@@ -16,7 +16,7 @@ import pandas as pd
 # import pickle
 
 try:
-    import imp; _job = imp.load_source('_job', './.job.conf')
+    import imp; _job = imp.load_source('_job', '../.job.conf')
 except:
     pass
 

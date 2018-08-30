@@ -1,6 +1,6 @@
 #!/bin/bash
 # (>>>FILE<<<)
-# (>>>ISO_DATE<<<) david.montaner@gmail.com
+# (>>>ISO_DATE<<<) david@insightcapital.io
 # (>>>COMMENT<<<)
 
-source .job.conf
+source ../.job.conf

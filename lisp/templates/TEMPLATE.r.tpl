@@ -1,5 +1,5 @@
 ## (>>>FILE<<<)
-## (>>>ISO_DATE<<<) david.montaner@gmail.com
+## (>>>ISO_DATE<<<) david@insightcapital.io
 ## (>>>COMMENT<<<)
 
 date()
@@ -13,7 +13,7 @@ R.version.string ## "R version 3.4.0 (2017-04-21)"
 ## library(readr); packageDescription("readr", fields = "Version") # "1.1.1"
 ## library(feather); packageDescription("feather", fields = "Version") # "0.3.1"
 
-try(if(!exists(".job")) {.job <- new.env(); source(".job.conf", local = .job); .job <- as.list(.job)}); try(.job)
+try(if(!exists(".job")) {.job <- new.env(); source("../.job.conf", local = .job); .job <- as.list(.job)}); try(.job)
 
 options(width = 130)
 options(width = 200)

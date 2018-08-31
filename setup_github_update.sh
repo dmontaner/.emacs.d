@@ -1,5 +1,5 @@
 #!/bin/bash
-# github_update.sh
+# setup_github_update.sh
 # 2017-11-14 david.montaner@gmail.com
 # update all dependencies form github
 

@@ -37,7 +37,7 @@ cd ESS
 make
 cd ..
 
-## elpy 17 is broken use 16.1
-cd elpy
-git checkout tags/1.16.1
-cd ..
+# ## elpy 17 is broken use 16.1 ; elpy 1.9.0 seems to be working fine
+# cd elpy
+# git checkout tags/1.16.1
+# cd ..

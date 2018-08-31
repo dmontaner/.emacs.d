@@ -1,8 +1,12 @@
 #!/bin/bash
-# setup_python_dependencies.sh
+# setup_dependencies.sh
 # 2018-08-31 david.montaner@gmail.com
 # install some python libraries and dependencies required by elpy
 
+# needed in ess
+sudo apt-get install texlive
+
+# required python libraries
 sudo -H pip3 install --upgrade rope
 sudo -H pip3 install --upgrade jedi
 sudo -H pip3 install --upgrade flake8   # flake8 for code checks

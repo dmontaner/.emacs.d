@@ -15,3 +15,9 @@ do
 done
 
 echo "ess will need a make !!!!"
+## ess needs a make
+## it has this dependencies before:
+## sudo apt-get install texlive
+cd ESS
+make
+cd ..

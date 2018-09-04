@@ -11,8 +11,11 @@ import os
 import pandas as pd
 # import sklearn as sk
 # from scipy import stats
-# import matplotlib.pyplot as plt
+import matplotlib
+import matplotlib.pyplot as plt
+# import seaborn as sns
 # import feather
+# import json
 # import pickle
 
 try:
@@ -20,7 +23,7 @@ try:
 except:
     pass
 
-pd.set_option('display.width', 350)
+pd.set_option('display.width', 173)
 pd.set_option('display.max_rows', 10)
 pd.set_option('display.max_columns', None)
 # pd.set_option('display.expand_frame_repr', False)
@@ -28,7 +31,11 @@ pd.set_option('display.max_columns', None)
 # pd.get_option('display.expand_frame_repr')
 
 # np.set_printoptions(linewidth=240)
+
 # plt.style.use('ggplot')
+# matplotlib.rc('figure', figsize=[20, 20])
+matplotlib.rc('figure', figsize=[40, 20], dpi=200)
+matplotlib.rc('font', size=20)
 
 ################################################################################
 

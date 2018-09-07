@@ -7,16 +7,16 @@ Sys.info()[c("nodename", "user")]
 commandArgs()
 rm(list = ls())
 R.version.string ## "R version 3.4.0 (2017-04-21)"
-## library(dplyr); packageDescription("dplyr", fields = "Version") # "0.7.4.9000"
-## library(tibble); packageDescription("tibble", fields = "Version") # "1.3.4"
-## library(ggplot2); packageDescription("ggplot2", fields = "Version") # "2.2.1"
+## library(dplyr); packageDescription("dplyr", fields = "Version") # "0.7.6"
+## library(tibble); packageDescription("tibble", fields = "Version") # "1.4.2"
+## library(ggplot2); packageDescription("ggplot2", fields = "Version") # "3.0.0"
 ## library(readr); packageDescription("readr", fields = "Version") # "1.1.1"
 ## library(feather); packageDescription("feather", fields = "Version") # "0.3.1"
 
 try(if(!exists(".job")) {.job <- new.env(); source("../.job.conf", local = .job); .job <- as.list(.job)}); try(.job)
 
-options(width = 130)
-options(width = 200)
+options(width = 172)
+options(width = 300)
 
 ## ### FUNCTIONS
 ## if(!"F" %in% search()) attach(NULL, name = "F")

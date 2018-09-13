@@ -51,6 +51,8 @@ os.listdir()
 datos = pd.read_table('')
 datos.shape
 datos.dtypes.value_counts()
+datos.info()
+datos.applymap(type).nunique()
 datos.head()
 
 

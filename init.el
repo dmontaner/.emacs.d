@@ -27,8 +27,8 @@
 
 (setq-default parens-require-spaces nil) ;; do not insert space before the parentheses when using the function "insert-parentheses"
 
-(setq require-final-newline nil)       ;; do not insert new lines at the end of the file when saving
-(setq mode-require-final-newline nil)  ;; do not insert new lines at the end of the file when saving
+; (setq require-final-newline nil)       ;; do not insert new lines at the end of the file when saving
+; (setq mode-require-final-newline nil)  ;; do not insert new lines at the end of the file when saving
 
 ;;; DO NOT SAVE HORRIBLE (~) FILES
 ;; By default Emacs saves Backup Files under the original name with a tilde `~’ appended. 

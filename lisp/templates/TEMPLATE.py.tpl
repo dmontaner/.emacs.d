@@ -18,10 +18,26 @@ import matplotlib.pyplot as plt
 # import json
 # import pickle
 
+# CONFIGURATION
 try:
-    import imp; _job = imp.load_source('_job', '../.job.conf')
+    try:
+        from importlib.machinery import SourceFileLoader
+        _job = SourceFileLoader('job_config', '../.job.conf').load_module()
+        print('config imported using: importlib')
+    except:
+        from imp import load_source
+        _job = load_source('job_config', '../.job.conf')
+        print('config imported using: imp')
 except:
     pass
+
+# # FUNCTIONS
+# try:
+#     mymod = SourceFileLoader('mod', os.path.join(_job.dir_functions, 'mymod.py')).load_module()
+#     print('functions imported using: importlib')
+# except:
+#     mymod = load_source('mod', os.path.join(_job.dir_functions, 'mymod.py'))
+#     print('functions imported using: imp')
 
 pd.set_option('display.width', 173)
 pd.set_option('display.max_rows', 10)

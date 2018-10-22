@@ -11,8 +11,8 @@ import os
 import pandas as pd
 # import sklearn as sk
 # from scipy import stats
-import matplotlib
-import matplotlib.pyplot as plt
+# import matplotlib
+# import matplotlib.pyplot as plt
 # import seaborn as sns
 # import feather
 # import json
@@ -50,8 +50,8 @@ pd.set_option('display.max_columns', None)
 
 # plt.style.use('ggplot')
 # matplotlib.rc('figure', figsize=[20, 20])
-matplotlib.rc('figure', figsize=[40, 20], dpi=200)
-matplotlib.rc('font', size=20)
+# matplotlib.rc('figure', figsize=[40, 20], dpi=200)
+# matplotlib.rc('font', size=20)
 
 ################################################################################
 

@@ -16,6 +16,7 @@
 (column-number-mode t)
 (load-theme 'wombat t)
 (scroll-bar-mode -1)
+(setq ring-bell-function 'ignore)   ;; disable sound notifications
 
 ;; FONT
 (custom-set-faces

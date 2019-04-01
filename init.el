@@ -24,7 +24,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 110 :width normal)))))
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 150 :width normal)))))
 
 (setq-default parens-require-spaces nil) ;; do not insert space before the parentheses when using the function "insert-parentheses"
 
@@ -135,38 +135,38 @@
 ;; (http://vgoulet.act.ulaval.ca/en/emacs/) Emacs binary by Vincent Goulet.
 
 
-(add-to-list 'load-path "~/.emacs.d/downloaded_from_github/ESS/lisp") ;; ad one more path to the load-path variable
-(load "ess-site")  ;; THIS ADDS 0.7 sec to the starting... see if could be changed by autoload
+;; (add-to-list 'load-path "~/.emacs.d/downloaded_from_github/ESS/lisp") ;; ad one more path to the load-path variable
+;; (load "ess-site")  ;; THIS ADDS 0.7 sec to the starting... see if could be changed by autoload
 
-(setq split-width-threshold nil) ;; split horizontally
-;; (add-to-list 'auto-mode-alist '("\\.Rout" . (read-only-mode R-mode)))  ;; add a list of modes to Rout files... I should not need this with ESS ???
+;; (setq split-width-threshold nil) ;; split horizontally
+;; ;; (add-to-list 'auto-mode-alist '("\\.Rout" . (read-only-mode R-mode)))  ;; add a list of modes to Rout files... I should not need this with ESS ???
 
-;; NOTE: currently this is working for all type of files... see how to set it just for R mode
-;;
-;; shortcut for pipes %>%
-(defun R_operator_pipe ()
-  "R - %>% operator or  pipe operator"
-  (interactive)
-  (just-one-space 1)
-  (insert "%>%")
-  (just-one-space 1)
-  ;;(reindent-then-newline-and-indent)
-  )
-(global-set-key (kbd "M-5") 'R_operator_pipe)
-;;
-;; shortcut for pipes %in%
-(defun R_operator_in ()
-  "R - %in% operator or in operator"
-  (interactive)
-  (just-one-space 1)
-  (insert "%in%")
-  (just-one-space 1)
-  ;;(reindent-then-newline-and-indent)
-  )
-(global-set-key (kbd "M-i") 'R_operator_in)
+;; ;; NOTE: currently this is working for all type of files... see how to set it just for R mode
+;; ;;
+;; ;; shortcut for pipes %>%
+;; (defun R_operator_pipe ()
+;;   "R - %>% operator or  pipe operator"
+;;   (interactive)
+;;   (just-one-space 1)
+;;   (insert "%>%")
+;;   (just-one-space 1)
+;;   ;;(reindent-then-newline-and-indent)
+;;   )
+;; (global-set-key (kbd "M-5") 'R_operator_pipe)
+;; ;;
+;; ;; shortcut for pipes %in%
+;; (defun R_operator_in ()
+;;   "R - %in% operator or in operator"
+;;   (interactive)
+;;   (just-one-space 1)
+;;   (insert "%in%")
+;;   (just-one-space 1)
+;;   ;;(reindent-then-newline-and-indent)
+;;   )
+;; (global-set-key (kbd "M-i") 'R_operator_in)
 
-;; eval R up to the cursor
-(global-set-key (kbd "C-c C-m") 'ess-eval-buffer-from-beg-to-here)
+;; ;; eval R up to the cursor
+;; (global-set-key (kbd "C-c C-m") 'ess-eval-buffer-from-beg-to-here)
 
 
 ;; ;(define-key R-mode (kbd "M-%") 'then_R_operator)
@@ -178,32 +178,32 @@
 
 ;;; R & markdown : POLYMODE
 
-;; add paths
-(setq load-path
-      (append '("~/.emacs.d/downloaded_from_github/polymode/"  "~/.emacs.d/downloaded_from_github/polymode/modes/")
-              load-path))
-;(add-to-list 'load-path '"~/.emacs.d/downloaded_from_github/polymode/")
-;(add-to-list 'load-path '"~/.emacs.d/downloaded_from_github/polymode/modes")
+;; ;; add paths
+;; (setq load-path
+;;       (append '("~/.emacs.d/downloaded_from_github/polymode/"  "~/.emacs.d/downloaded_from_github/polymode/modes/")
+;;               load-path))
+;; ;(add-to-list 'load-path '"~/.emacs.d/downloaded_from_github/polymode/")
+;; ;(add-to-list 'load-path '"~/.emacs.d/downloaded_from_github/polymode/modes")
 
-;;Require any polymode bundles that you are interested in. For example:
-;(require 'polymode)
-; (require 'poly-R)
-; (require 'poly-markdown)
+;; ;;Require any polymode bundles that you are interested in. For example:
+;; ;(require 'polymode)
+;; ; (require 'poly-R)
+;; ; (require 'poly-markdown)
 
-;; R modes extensions
-(add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
-(add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
-(add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
+;; ;; R modes extensions
+;; (add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
+;; (add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
+;; (add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
 
-;; polymode-insert-new-chunk implementation from
-;; https://github.com/vspinu/polymode/issues/123
-(defun polymode-insert-new-chunk ()
-  (interactive)
-  (insert "\n```{r}\n")
-  (save-excursion
-    (newline)
-    (insert "```\n")
-    (previous-line)))
+;; ;; polymode-insert-new-chunk implementation from
+;; ;; https://github.com/vspinu/polymode/issues/123
+;; (defun polymode-insert-new-chunk ()
+;;   (interactive)
+;;   (insert "\n```{r}\n")
+;;   (save-excursion
+;;     (newline)
+;;     (insert "```\n")
+;;     (previous-line)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

@@ -135,6 +135,7 @@
 ;; (http://vgoulet.act.ulaval.ca/en/emacs/) Emacs binary by Vincent Goulet.
 
 
+
 ;; (add-to-list 'load-path "~/.emacs.d/downloaded_from_github/ESS/lisp") ;; ad one more path to the load-path variable
 ;; (load "ess-site")  ;; THIS ADDS 0.7 sec to the starting... see if could be changed by autoload
 

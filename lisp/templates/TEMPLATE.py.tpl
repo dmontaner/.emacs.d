@@ -20,24 +20,20 @@ import pandas as pd
 
 # CONFIGURATION
 try:
-    try:
-        from importlib.machinery import SourceFileLoader
-        _job = SourceFileLoader('job_config', '../.job.conf').load_module()
-        print('config imported using: importlib')
-    except:
-        from imp import load_source
-        _job = load_source('job_config', '../.job.conf')
-        print('config imported using: imp')
-except:
+    from importlib.machinery import SourceFileLoader
+    _job = SourceFileLoader('_job', '../.job.conf').load_module()
+    print('_job config imported')
+except Exception:
+    print('.job.conf config file not found')
     pass
 
 # # FUNCTIONS
 # try:
-#     mymod = SourceFileLoader('mod', os.path.join(_job.dir_functions, 'mymod.py')).load_module()
-#     print('functions imported using: importlib')
-# except:
-#     mymod = load_source('mod', os.path.join(_job.dir_functions, 'mymod.py'))
-#     print('functions imported using: imp')
+#     tr = SourceFileLoader('tr', os.path.join(_job.dir_functions, 'tr0.py')).load_module()
+#     print('functions imported')
+# except Exception:
+#     print('functions file not found')
+#     pass
 
 pd.set_option('display.width', 173)
 pd.set_option('display.max_rows', 10)

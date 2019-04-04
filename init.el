@@ -1,5 +1,7 @@
 
-
+;;; reset global
+;;; https://stackoverflow.com/questions/163591/bash-autocompletion-in-emacs-shell-mode
+(global-set-key "\M-\r" 'shell-resync-dirs)
 
 ;;; SET DEFAULT DICTIONARY
 (setq ispell-dictionary "american")
@@ -139,7 +141,7 @@
 ;; (add-to-list 'load-path "~/.emacs.d/downloaded_from_github/ESS/lisp") ;; ad one more path to the load-path variable
 ;; (load "ess-site")  ;; THIS ADDS 0.7 sec to the starting... see if could be changed by autoload
 
-;; (setq split-width-threshold nil) ;; split horizontally
+(setq split-width-threshold nil) ;; split horizontally
 ;; ;; (add-to-list 'auto-mode-alist '("\\.Rout" . (read-only-mode R-mode)))  ;; add a list of modes to Rout files... I should not need this with ESS ???
 
 ;; ;; NOTE: currently this is working for all type of files... see how to set it just for R mode

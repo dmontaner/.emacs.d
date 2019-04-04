@@ -1,7 +1,10 @@
+;;; reload this config:
+;;; M-x load-file ...  and press RETURN TWICE
 
 ;;; reset global
 ;;; https://stackoverflow.com/questions/163591/bash-autocompletion-in-emacs-shell-mode
 (global-set-key "\M-\c" 'shell-resync-dirs)
+
 
 ;;; SET DEFAULT DICTIONARY
 (setq ispell-dictionary "american")
@@ -19,6 +22,7 @@
 (load-theme 'wombat t)
 (scroll-bar-mode -1)
 (setq ring-bell-function 'ignore)   ;; disable sound notifications
+(set-cursor-color "#bb1515")        ;; set cursor color. Needs to be here after loading the template. Nice red: "#bb1515". White: "#ffffff"
 
 ;; FONT
 (custom-set-faces

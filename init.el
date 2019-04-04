@@ -1,4 +1,5 @@
-
+;;; reload this config:
+;;; M-x load-file ...  and press RETURN TWICE
 
 
 ;;; SET DEFAULT DICTIONARY
@@ -17,6 +18,7 @@
 (load-theme 'wombat t)
 (scroll-bar-mode -1)
 (setq ring-bell-function 'ignore)   ;; disable sound notifications
+(set-cursor-color "#bb1515")        ;; set cursor color. Needs to be here after loading the template. Nice red: "#bb1515". White: "#ffffff"
 
 ;; FONT
 (custom-set-faces

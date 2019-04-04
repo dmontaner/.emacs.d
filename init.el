@@ -1,7 +1,7 @@
 
 ;;; reset global
 ;;; https://stackoverflow.com/questions/163591/bash-autocompletion-in-emacs-shell-mode
-(global-set-key "\M-\r" 'shell-resync-dirs)
+(global-set-key "\M-\c" 'shell-resync-dirs)
 
 ;;; SET DEFAULT DICTIONARY
 (setq ispell-dictionary "american")

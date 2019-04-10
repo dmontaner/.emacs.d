@@ -415,6 +415,19 @@
 ;;  ;; If there is more than one, they won't work right.
 ;;  )
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; YAML
+;; https://www.emacswiki.org/emacs/YamlMode
+(add-to-list 'load-path "~/.emacs.d/downloaded_from_github/yaml-mode") ;; ad one more path to the load-path variable
+(require 'yaml-mode)
+
+;; (add-hook 'yaml-mode-hook
+;;           (lambda ()
+;;             (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ;; ??? not sure if this is interesting or not
 ;; enable all disabled commands in Emacs such as downcase-region 
 ;; https://stackoverflow.com/questions/10026221/enable-all-disabled-commands-permanently

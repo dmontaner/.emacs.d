@@ -28,6 +28,7 @@ git clone https://github.com/Sterlingg/json-snatcher
 git clone https://github.com/gongo/json-reformat
 git clone https://github.com/DamienCassou/hierarchy
 git clone https://github.com/DamienCassou/json-navigator
+git clone https://github.com/yoshiki/yaml-mode
 
 
 ## ess needs a make

@@ -37,6 +37,8 @@
 ;; By default Emacs saves Backup Files under the original name with a tilde `~’ appended. 
 ;; To reallocate Emacs backup files (tilde ~) do:
 (setq backup-directory-alist '(("." . "~/.emacs.d/backups/"))) ;backup files will be saved in the directory "~/.emacs.d/backups/"
+; (setq make-backup-files nil) ; stop creating backup~ files
+; (setq auto-save-default nil) ; stop creating #autosave# files
 
 ;;; MAXIMIZE WINDOW
 (add-to-list 'default-frame-alist '(fullscreen . maximized))

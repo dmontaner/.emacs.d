@@ -184,20 +184,14 @@
 
 ;; add paths
 (setq load-path
-      (append '("~/.emacs.d/downloaded_from_github/polymode/"  "~/.emacs.d/downloaded_from_github/polymode/modes/")
+      (append '("~/.emacs.d/downloaded_from_github/polymode/"  "~/.emacs.d/downloaded_from_github/poly-markdown")
               load-path))
-;(add-to-list 'load-path '"~/.emacs.d/downloaded_from_github/polymode/")
-;(add-to-list 'load-path '"~/.emacs.d/downloaded_from_github/polymode/modes")
 
 ;;Require any polymode bundles that you are interested in. For example:
-;(require 'polymode)
-; (require 'poly-R)
-; (require 'poly-markdown)
+(require 'poly-markdown)
 
 ;; R modes extensions
-(add-to-list 'auto-mode-alist '("\\.Snw" . poly-noweb+r-mode))
-(add-to-list 'auto-mode-alist '("\\.Rnw" . poly-noweb+r-mode))
-(add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown+r-mode))
+(add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown-mode))
 
 ;; polymode-insert-new-chunk implementation from
 ;; https://github.com/vspinu/polymode/issues/123

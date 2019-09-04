@@ -18,7 +18,8 @@ git clone https://github.com/ensime/ensime-emacs
 git clone https://github.com/purcell/exec-path-from-shell
 git clone https://github.com/technomancy/find-file-in-project
 git clone https://github.com/jrblevin/markdown-mode
-git clone https://github.com/vspinu/polymode
+git clone https://github.com/polymode/polymode
+git clone https://github.com/polymode/poly-markdown
 git clone https://github.com/auto-complete/popup-el
 git clone https://github.com/jorgenschaefer/pyvenv
 git clone https://github.com/magnars/s.el

@@ -203,6 +203,8 @@
     (insert "```\n")
     (previous-line)))
 
+(global-set-key (kbd "M-k") 'polymode-insert-new-chunk)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 

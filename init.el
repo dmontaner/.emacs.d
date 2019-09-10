@@ -28,6 +28,10 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 110 :width normal)))))
 
+;; font zoom
+;; https://www.emacswiki.org/emacs/SetFonts#toc8
+(set-face-attribute 'default (selected-frame) :height 80) ; home screen
+
 (setq-default parens-require-spaces nil) ;; do not insert space before the parentheses when using the function "insert-parentheses"
 
 ; (setq require-final-newline nil)       ;; do not insert new lines at the end of the file when saving

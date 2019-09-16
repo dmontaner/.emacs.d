@@ -30,7 +30,7 @@
 
 ;; font zoom
 ;; https://www.emacswiki.org/emacs/SetFonts#toc8
-(set-face-attribute 'default (selected-frame) :height 80) ; home screen
+; (set-face-attribute 'default (selected-frame) :height 80) ; home screen
 
 (setq-default parens-require-spaces nil) ;; do not insert space before the parentheses when using the function "insert-parentheses"
 

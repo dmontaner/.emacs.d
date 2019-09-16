@@ -437,5 +437,7 @@
 (put 'downcase-region 'disabled nil)
 
 ;; some shortcuts
-(global-set-key (kbd "C-M-c") 'comment-region)
-(global-set-key (kbd "C-M-u") 'uncomment-region)
+; (global-set-key (kbd "C-M-c") 'comment-region)
+; (global-set-key (kbd "C-M-u") 'uncomment-region)
+(global-set-key (kbd "M-c") 'comment-region)
+(global-set-key (kbd "M-u") 'uncomment-region)

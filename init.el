@@ -435,3 +435,7 @@
 ;; https://stackoverflow.com/questions/10026221/enable-all-disabled-commands-permanently
 (put 'upcase-region 'disabled nil)
 (put 'downcase-region 'disabled nil)
+
+;; some shortcuts
+(global-set-key (kbd "C-M-c") 'comment-region)
+(global-set-key (kbd "C-M-u") 'uncomment-region)

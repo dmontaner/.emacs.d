@@ -3,7 +3,7 @@
 # (>>>COMMENT<<<)
 
 import os
-# import sys
+import sys
 # import re
 # import time
 # import shutil
@@ -18,28 +18,15 @@ import pandas as pd
 # import json
 # import pickle
 
-# CONFIGURATION
-try:
-    from importlib.machinery import SourceFileLoader
-    _job = SourceFileLoader('_job', '../.job.conf').load_module()
-    print('_job config imported')
-except Exception:
-    print('.job.conf config file not found')
-    pass
-
-# # FUNCTIONS
-# try:
-#     tr = SourceFileLoader('tr', os.path.join(_job.dir_functions, 'tr0.py')).load_module()
-#     print('functions imported')
-# except Exception:
-#     print('functions file not found')
-#     pass
+sys.path.append('..')
+from config import settings as _job
+from functions import ...
 
 pd.set_option('display.width', 173)
 pd.set_option('display.max_rows', 10)
 pd.set_option('display.max_columns', None)
-# pd.set_option('display.expand_frame_repr', False)
 # pd.set_option('display.max_colwidth', 100)
+# pd.set_option('display.expand_frame_repr', False)
 # pd.get_option('display.expand_frame_repr')
 
 # np.set_printoptions(linewidth=240)

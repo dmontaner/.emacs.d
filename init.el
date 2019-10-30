@@ -441,3 +441,8 @@
 ; (global-set-key (kbd "C-M-u") 'uncomment-region)
 (global-set-key (kbd "M-c") 'comment-region)
 (global-set-key (kbd "M-u") 'uncomment-region)
+
+;; Split Buffers Side-by-Side
+;; From: https://stackoverflow.com/questions/2081577/setting-emacs-to-split-buffers-side-by-side
+(setq split-height-threshold nil)
+(setq split-width-threshold 0)

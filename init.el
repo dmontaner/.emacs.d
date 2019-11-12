@@ -1,6 +1,8 @@
 ;;; reload this config:
 ;;; M-x load-file ...  and press RETURN TWICE
 
+;; THEME
+(load-theme 'wombat t)
 
 ;;; SET DEFAULT DICTIONARY
 (setq ispell-dictionary "american")
@@ -15,7 +17,6 @@
 (defalias 'yes-or-no-p 'y-or-n-p)   ;; short yes no
 (setq-default indent-tabs-mode nil) ;; use spaces instead of tabs when indenting
 (column-number-mode t)
-(load-theme 'wombat t)
 (scroll-bar-mode -1)
 (setq ring-bell-function 'ignore)   ;; disable sound notifications
 (set-cursor-color "#bb1515")        ;; set cursor color. Needs to be here after loading the template. Nice red: "#bb1515". White: "#ffffff"
@@ -176,6 +177,11 @@
 ;; eval R up to the cursor
 (global-set-key (kbd "C-c C-m") 'ess-eval-buffer-from-beg-to-here)
 
+;; do not indent single-# comments
+;; https://stackoverflow.com/questions/780796/emacs-ess-mode-tabbing-for-comment-region
+(defun my-ess-settings ()
+  (setq ess-indent-with-fancy-comments nil))
+(add-hook 'ess-mode-hook #'my-ess-settings)
 
 ;; ;(define-key R-mode (kbd "M-%") 'then_R_operator)
 ;; ;(define-key ess-mode-map (kbd "C-5") 'then_R_operator)

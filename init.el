@@ -319,6 +319,8 @@
 ;; ;;(elpy-enable)
 ;; ;;(add-to-list 'auto-mode-alist '("\\.py\\'" . elpy-mode))  ;; no se por que necesito esto
 
+(global-set-key (kbd "C-,") 'python-indent-shift-left)
+(global-set-key (kbd "C-.") 'python-indent-shift-right)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

@@ -4,36 +4,35 @@
 
 import os
 import sys
-# import re
 # import time
+# import pickle
+# import json
+# import re
 # import shutil
 # import numpy as np
 import pandas as pd
-# import sklearn as sk
 # from scipy import stats
+# from sklearn import model_selection
+# from sklearn import metrics
+# from sklearn import tree
+# from sklearn import svm
 # import matplotlib
 # import matplotlib.pyplot as plt
 # import seaborn as sns
-# import feather
-# import json
-# import pickle
 
 sys.path.append('..')
 from config import settings as _job
 from functions import ...
 
+# np.set_printoptions(linewidth=173)
 pd.set_option('display.width', 173)
 pd.set_option('display.max_rows', 10)
 pd.set_option('display.max_columns', None)
 # pd.set_option('display.max_colwidth', 100)
-# pd.set_option('display.expand_frame_repr', False)
-# pd.get_option('display.expand_frame_repr')
 
-# np.set_printoptions(linewidth=240)
-
-# plt.style.use('ggplot')
-# matplotlib.rc('figure', figsize=[20, 20])
 # matplotlib.rc('figure', figsize=[40, 20], dpi=200)
+# matplotlib.rc('figure', figsize=[20, 20])
+# plt.style.use('ggplot')
 # matplotlib.rc('font', size=20)
 
 ################################################################################

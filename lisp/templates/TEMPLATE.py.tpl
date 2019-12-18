@@ -20,6 +20,7 @@ import pandas as pd
 # import matplotlib
 # import matplotlib.pyplot as plt
 # import seaborn as sns
+# import plotly.express as px
 
 sys.path.append('..')
 from config import settings as _job

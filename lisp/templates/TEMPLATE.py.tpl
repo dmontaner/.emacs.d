@@ -20,6 +20,7 @@ import pandas as pd
 # import matplotlib
 # import matplotlib.pyplot as plt
 # import seaborn as sns
+# import plotly
 # import plotly.express as px
 
 sys.path.append('..')
@@ -83,6 +84,10 @@ plt.show(block=False)
 plt.savefig('PLOT_NAME.png')
 plt.close()
 
+
+# plotly express
+fig = px.scatter(df, x='', y='')
+plotly.io.write_html(fig, file='temp.html', auto_open=True)
 
 # EXIT
 print('\nPython SUCCESSFULLY finished')

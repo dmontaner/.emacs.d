@@ -454,3 +454,12 @@
 ;; From: https://stackoverflow.com/questions/2081577/setting-emacs-to-split-buffers-side-by-side
 (setq split-height-threshold nil)
 (setq split-width-threshold 0)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; EXECUTE EXTERNAL PYTHON SCRIPT ON THE BUFFER SCRIPT
+;; this is just a test
+(defun runpy ()
+  (interactive)
+  (insert (shell-command-to-string (format "python3 /home/dmontaner/bin/imprime.py %s" buffer-file-name))))

@@ -14,7 +14,6 @@ git clone https://github.com/magnars/dash.el
 git clone https://github.com/jorgenschaefer/elpy
 git clone https://github.com/ensime/emacs-sbt-mode
 git clone https://github.com/ensime/emacs-scala-mode
-git clone https://github.com/ensime/ensime-emacs
 git clone https://github.com/purcell/exec-path-from-shell
 git clone https://github.com/technomancy/find-file-in-project
 git clone https://github.com/jrblevin/markdown-mode

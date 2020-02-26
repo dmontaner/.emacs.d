@@ -1,25 +1,20 @@
 ;;; reload this config:
 ;;; M-x load-file ...  and press RETURN TWICE
 
-;; THEME
-(load-theme 'wombat t)
-
-;;; SET DEFAULT DICTIONARY
-(setq ispell-dictionary "american")
-;(setq ispell-dictionary "castellano8")
-
-
 ;;; BASIC CUSTOMIZATION
-(setq inhibit-startup-message t)    ;; hide the startup message
-(menu-bar-mode -1)                  ;; disable menu bar
-(tool-bar-mode -1)                  ;; disable toolbar completely
-(cua-mode t)                        ;; copy paste with C-c C-v
-(defalias 'yes-or-no-p 'y-or-n-p)   ;; short yes no
-(setq-default indent-tabs-mode nil) ;; use spaces instead of tabs when indenting
+(load-theme 'wombat t)                 ;; THEME
+(setq ispell-dictionary "american")    ;; default dictionary
+;(setq ispell-dictionary "castellano8") ;; default dictionary
+(setq inhibit-startup-message t)       ;; hide the startup message
+(menu-bar-mode -1)                     ;; disable menu bar
+(tool-bar-mode -1)                     ;; disable toolbar completely
+(cua-mode t)                           ;; copy paste with C-c C-v
+(defalias 'yes-or-no-p 'y-or-n-p)      ;; short yes no
+(setq-default indent-tabs-mode nil)    ;; use spaces instead of tabs when indenting
 (column-number-mode t)
 (scroll-bar-mode -1)
-(setq ring-bell-function 'ignore)   ;; disable sound notifications
-(set-cursor-color "#bb1515")        ;; set cursor color. Needs to be here after loading the template. Nice red: "#bb1515". White: "#ffffff"
+(setq ring-bell-function 'ignore)      ;; disable sound notifications
+(set-cursor-color "#bb1515")           ;; set cursor color. Needs to be here after loading the template. Nice red: "#bb1515". White: "#ffffff"
 
 ;; FONT
 (custom-set-faces
@@ -47,8 +42,6 @@
 
 ;;; MAXIMIZE WINDOW
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
-
-
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

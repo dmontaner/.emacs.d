@@ -270,7 +270,8 @@
 (elpy-enable)
 
 (setq elpy-rpc-backend "jedi")
-(setq elpy-shell-use-project-root nil) ;; If this variable is set to nil, the current directory is used as default directory when starting a Python shells.
+(setq elpy-shell-starting-directory 'current-directory) ;; If this variable is set to nil, the current directory is used as default directory when starting a Python shells.
+; (setq elpy-shell-use-project-root nil) ;; If this variable is set to nil, the current directory is used as default directory when starting a Python shells. This variable is obsolete since 1.32.0; use ‘elpy-shell-starting-directory’ instead.
 
 ;; (define-key elpy-mode-map (kbd "C-c C-n") 'elpy-shell-send-current-statement)
 (define-key elpy-mode-map (kbd "C-c C-n") 'elpy-shell-send-statement-and-step)

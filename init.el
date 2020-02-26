@@ -284,6 +284,9 @@
 (define-key elpy-mode-map (kbd "C-c C-b") 'elpy-shell-send-region-or-buffer)
 (define-key elpy-mode-map (kbd "C-c C-r") 'elpy-shell-send-region-or-buffer)
 
+;; enable FOLDING
+;; https://elpy.readthedocs.io/en/latest/ide.html#folding
+(add-hook 'python-mode-hook 'hs-minor-mode)
 
 ;; python version (interpreter)
 

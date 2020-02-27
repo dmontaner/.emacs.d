@@ -435,6 +435,13 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;; PDF
+; (add-to-list 'load-path "~/.emacs.d/downloaded_from_github/pdf-tools") ;; ad one more path to the load-path variable
+; (require 'pdf-tools)
+; (pdf-tools-install)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
 ;; ??? not sure if this is interesting or not
 ;; enable all disabled commands in Emacs such as downcase-region 
 ;; https://stackoverflow.com/questions/10026221/enable-all-disabled-commands-permanently

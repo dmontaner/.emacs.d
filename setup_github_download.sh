@@ -29,7 +29,7 @@ git clone https://github.com/gongo/json-reformat
 git clone https://github.com/DamienCassou/hierarchy
 git clone https://github.com/DamienCassou/json-navigator
 git clone https://github.com/yoshiki/yaml-mode
-
+git clone https://github.com/politza/pdf-tools
 
 ## ess needs a make
 ## it has this dependencies before:
@@ -38,7 +38,10 @@ cd ESS
 make
 cd ..
 
-# ## elpy 17 is broken use 16.1 ; elpy 1.9.0 seems to be working fine
-# cd elpy
-# git checkout tags/1.16.1
-# cd ..
+## pdf-tools needs a make
+cd pdf-tools
+curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
+export PATH="/home/dmontaner/.cask/bin:$PATH"  # added to my .bashrc
+make
+ln -s "$(pwd)"/server/epdfinfo ~/bin/
+cd ..

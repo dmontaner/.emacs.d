@@ -154,7 +154,7 @@
   (just-one-space 1)
   ;;(reindent-then-newline-and-indent)
   )
-(global-set-key (kbd "M-5") 'R_operator_pipe)
+;(global-set-key (kbd "M-5") 'R_operator_pipe)
 ;;
 ;; shortcut for pipes %in%
 (defun R_operator_in ()
@@ -165,7 +165,12 @@
   (just-one-space 1)
   ;;(reindent-then-newline-and-indent)
   )
-(global-set-key (kbd "M-i") 'R_operator_in)
+;(global-set-key (kbd "M-i") 'R_operator_in)
+;;
+(add-hook 'ess-r-mode-hook
+          (lambda ()
+            (local-set-key "\M-5" 'R_operator_pipe)
+            (local-set-key "\M-i" 'R_operator_in)))
 
 ;; eval R up to the cursor
 (global-set-key (kbd "C-c C-m") 'ess-eval-buffer-from-beg-to-here)
@@ -214,9 +219,8 @@
 ;;; SET MY KEY SHORTCUTS
 ;;  NOTE: I do it at the end so that they overwrite other possible configurations
 (set-default 'truncate-lines t)
-;(global-set-key (kbd "C-c v") 'visual-line-mode)
-(global-set-key (kbd "C-c C-v") 'visual-line-mode)
 
+(global-set-key (kbd "C-M-v") 'visual-line-mode)  ; could be also: toggle-truncate-lines
 
 ;;; MY KEY BINDINGS
 (global-set-key (kbd "M-n") 'forward-paragraph)   ;; paragraph up

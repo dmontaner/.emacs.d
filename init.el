@@ -282,6 +282,13 @@
 (define-key elpy-mode-map (kbd "C-c C-b") 'elpy-shell-send-region-or-buffer)
 (define-key elpy-mode-map (kbd "C-c C-r") 'elpy-shell-send-region-or-buffer)
 
+; VER COMO HACER QUE ESTO FUNCIONE ???
+;; (add-hook 'python-mode-hook
+;;           (lambda ()
+;;             (local-unset-key (kbd "C-c C-n"))
+;;             (local-set-key (kbd "C-c C-n") 'elpy-shell-send-statement-and-step)
+;;             ))
+
 ;; enable FOLDING
 ;; https://elpy.readthedocs.io/en/latest/ide.html#folding
 (add-hook 'python-mode-hook 'hs-minor-mode)

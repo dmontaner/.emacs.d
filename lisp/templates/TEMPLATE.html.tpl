@@ -14,11 +14,6 @@
 
     (>>>POINT<<<)
     
-    <hr>
-    <address>
-      <a href="mailto:(>>>LOGIN_NAME<<<)@(>>>HOST_ADDR<<<)">(>>>USER_NAME<<<)</a>,
-      (>>>DATE<<<)
-    </address>
   </body>
 </html>
 >>>TEMPLATE-DEFINITION-SECTION<<<

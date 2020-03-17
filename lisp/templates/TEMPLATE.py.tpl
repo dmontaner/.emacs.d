@@ -38,6 +38,8 @@ pd.set_option('display.max_columns', None)
 # plt.style.use('ggplot')
 # matplotlib.rc('font', size=20)
 
+# plotly.io.renderers.default = 'browser'
+
 ################################################################################
 
 # DATA

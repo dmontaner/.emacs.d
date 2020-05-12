@@ -478,3 +478,29 @@
 (defun runpy ()
   (interactive)
   (insert (shell-command-to-string (format "python3 /home/dmontaner/bin/imprime.py %s" buffer-file-name))))
+
+
+;; TESTING MODE
+;; ; (setq max-specpdl-size 130000) ; Original value was 1300
+;; (setq max-specpdl-size 5)  ; default is 1000, reduce the backtrace level
+;; (setq debug-on-error t)    ; now you should get a backtrace
+;; C-h a ; in speedbar
+
+;; JAVA SCRIPT MODE
+;; (add-hook 'js-mode-hook
+;;           (lambda ()
+;;             (make-local-variable 'tab-width)
+;;             (setq tab-width 2)))
+
+;; (setq tab-width 2) ; or any other preferred value
+;; (defvaralias 'c-basic-offset 'tab-width)
+;; (defvaralias 'cperl-indent-level 'tab-width)
+;;(setq-default c-basic-offset 2
+;;              tab-width 2)
+;; (custom-set-variables
+;;  ;; custom-set-variables was added by Custom.
+;;  ;; If you edit it by hand, you could mess it up, so be careful.
+;;  ;; Your init file should contain only one such instance.
+;;  ;; If there is more than one, they won't work right.
+;;  '(tab-width 2)
+;;  '(c-basic-offset 2))

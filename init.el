@@ -43,6 +43,20 @@
 ;;; MAXIMIZE WINDOW
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
+;;; My INSERT QUOTES FUNCTIONS
+;;  https://www.emacswiki.org/emacs/InsertPair
+(defun insert-quotes-double (&optional arg)
+  "Enclose following ARG sexps in quotes. Leave point after open-quote."
+  (interactive "*P")
+  (insert-pair arg ?\" ?\"))
+
+(defun insert-quotes-single (&optional arg)
+  "Enclose following ARG sexps in quotes. Leave point after open-quote."
+  (interactive "*P")
+  (insert-pair arg ?\' ?\'))
+
+(global-set-key (kbd "M-\"") 'insert-quotes-single)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

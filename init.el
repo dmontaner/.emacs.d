@@ -15,6 +15,7 @@
 (scroll-bar-mode -1)
 (setq ring-bell-function 'ignore)      ;; disable sound notifications
 (set-cursor-color "#bb1515")           ;; set cursor color. Needs to be here after loading the template. Nice red: "#bb1515". White: "#ffffff"
+; (global-auto-revert-mode t)            ;; auto-refresh all buffers when files have changed on disk
 
 ;; FONT
 (custom-set-faces

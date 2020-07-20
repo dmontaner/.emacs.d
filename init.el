@@ -196,6 +196,15 @@
   (setq ess-indent-with-fancy-comments nil))
 (add-hook 'ess-mode-hook #'my-ess-settings)
 
+;; https://ess.r-project.org/Manual/ess.html
+;; smart-underscore and ess-smart-S-assign-key have been removed.
+;; Users who liked the previous behavior (i.e. underscore inserting “<-”)
+;; should bind ess-insert-assign to the underscore in their Emacs initialization file.
+;; For example, (define-key ess-r-mode-map "_" #'ess-insert-assign) and
+;; (define-key inferior-ess-r-mode-map "_" #'ess-insert-assign) will activate it in all ESS R buffers.
+(define-key ess-r-mode-map          (kbd "M-=") #'ess-insert-assign)
+(define-key inferior-ess-r-mode-map (kbd "M-=") #'ess-insert-assign)
+
 ;; ;(define-key R-mode (kbd "M-%") 'then_R_operator)
 ;; ;(define-key ess-mode-map (kbd "C-5") 'then_R_operator)
 ;; ;(define-key inferior-ess-mode-map (kbd "C-%") 'then_R_operator)

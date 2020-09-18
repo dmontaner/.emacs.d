@@ -27,6 +27,12 @@ sys.path.append('..')
 from config import settings as _job
 from functions import ...
 
+print('sys.executable:', sys.executable)
+print('sys.version   :', sys.version.replace('\n', ''))
+print('sys.path      :')
+for x in sys.path:
+    print('               ', x)
+
 # np.set_printoptions(linewidth=173)
 pd.set_option('display.width', 173)
 pd.set_option('display.max_rows', 10)

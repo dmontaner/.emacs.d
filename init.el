@@ -2,8 +2,10 @@
 ;;; M-x load-file ...  and press RETURN TWICE
 
 ;;; BASIC CUSTOMIZATION
-; (load-theme 'wombat t)               ;; THEME
-(load-theme 'deeper-blue t)            ;; THEME
+; (load-theme 'deeper-blue t)
+; (load-theme 'wombat t) (set-cursor-color "#bb1515") ;; red   cursor. Needs to be set AFTER loading the theme.
+; (load-theme 'wombat t) (set-cursor-color "#ffffff") ;; white cursor. Needs to be set AFTER loading the theme.
+
 (setq ispell-dictionary "american")    ;; default dictionary
 ;(setq ispell-dictionary "castellano8") ;; default dictionary
 (setq inhibit-startup-message t)       ;; hide the startup message
@@ -15,9 +17,7 @@
 (column-number-mode t)
 (scroll-bar-mode -1)
 (setq ring-bell-function 'ignore)      ;; disable sound notifications
-;(set-cursor-color "#bb1515")          ;; set cursor color. Needs to be here AFTER loading the template. Nice red: "#bb1515". White: "#ffffff"
-(set-cursor-color "#ffffff")
-;;(global-auto-revert-mode t)            ;; auto-refresh all buffers when files have changed on disk
+; (global-auto-revert-mode t)            ;; auto-refresh all buffers when files have changed on disk
 
 ;; FONT
 (custom-set-faces

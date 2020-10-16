@@ -2,7 +2,8 @@
 ;;; M-x load-file ...  and press RETURN TWICE
 
 ;;; BASIC CUSTOMIZATION
-(load-theme 'wombat t)                 ;; THEME
+; (load-theme 'wombat t)               ;; THEME
+(load-theme 'deeper-blue t)            ;; THEME
 (setq ispell-dictionary "american")    ;; default dictionary
 ;(setq ispell-dictionary "castellano8") ;; default dictionary
 (setq inhibit-startup-message t)       ;; hide the startup message
@@ -14,8 +15,9 @@
 (column-number-mode t)
 (scroll-bar-mode -1)
 (setq ring-bell-function 'ignore)      ;; disable sound notifications
-(set-cursor-color "#bb1515")           ;; set cursor color. Needs to be here after loading the template. Nice red: "#bb1515". White: "#ffffff"
-; (global-auto-revert-mode t)            ;; auto-refresh all buffers when files have changed on disk
+;(set-cursor-color "#bb1515")          ;; set cursor color. Needs to be here AFTER loading the template. Nice red: "#bb1515". White: "#ffffff"
+(set-cursor-color "#ffffff")
+;;(global-auto-revert-mode t)            ;; auto-refresh all buffers when files have changed on disk
 
 ;; FONT
 (custom-set-faces

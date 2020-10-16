@@ -8,9 +8,10 @@
 
 ; (load-theme 'wombat t) (set-cursor-color "#bb1515") ;; red   cursor. Needs to be set AFTER loading the theme.
 ; (load-theme 'wombat t) (set-cursor-color "#ffffff") ;; white cursor. Needs to be set AFTER loading the theme.
-(load-theme 'deeper-blue t)
-(custom-set-faces '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 110 :width normal)))))
-; (custom-set-faces '(default ((t (:height 150))))) ;; just big font
+(load-theme 'deeper-blue t) (custom-set-faces '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 110 :width normal)))))
+; (load-theme 'leuven t) (custom-set-faces '(default ((t (:height 160))))) ;; big font white background for presentations
+
+; (custom-set-faces '(default ((t (:family "Ubuntu Mono" :foundry "DAMA" :slant normal :weight normal :height 130 :width normal)))))
 
 ;;; BASIC CUSTOMIZATION
 (setq ispell-dictionary "american")    ;; default dictionary

@@ -1,11 +1,18 @@
 ;;; reload this config:
 ;;; M-x load-file ...  and press RETURN TWICE
 
-;;; BASIC CUSTOMIZATION
-; (load-theme 'deeper-blue t)
+;; FONT and THEME
+;; custom-set-faces was added by Custom.
+;; If you edit it by hand, you could mess it up, so be careful.
+;; Your init file should contain only one such instance.
+
 ; (load-theme 'wombat t) (set-cursor-color "#bb1515") ;; red   cursor. Needs to be set AFTER loading the theme.
 ; (load-theme 'wombat t) (set-cursor-color "#ffffff") ;; white cursor. Needs to be set AFTER loading the theme.
+(load-theme 'deeper-blue t)
+(custom-set-faces '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 110 :width normal)))))
+; (custom-set-faces '(default ((t (:height 150))))) ;; just big font
 
+;;; BASIC CUSTOMIZATION
 (setq ispell-dictionary "american")    ;; default dictionary
 ;(setq ispell-dictionary "castellano8") ;; default dictionary
 (setq inhibit-startup-message t)       ;; hide the startup message
@@ -18,14 +25,6 @@
 (scroll-bar-mode -1)
 (setq ring-bell-function 'ignore)      ;; disable sound notifications
 ; (global-auto-revert-mode t)            ;; auto-refresh all buffers when files have changed on disk
-
-;; FONT
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 110 :width normal)))))
 
 ;; font zoom
 ;; https://www.emacswiki.org/emacs/SetFonts#toc8

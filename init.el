@@ -380,11 +380,11 @@
 (add-to-list 'load-path "~/.emacs.d/downloaded_from_github/json-snatcher")
 (add-to-list 'load-path "~/.emacs.d/downloaded_from_github/json-reformat")
 (add-to-list 'load-path "~/.emacs.d/downloaded_from_github/json-mode")
-; (require 'json-mode)
+(require 'json-mode)
 
 (add-to-list 'load-path "~/.emacs.d/downloaded_from_github/hierarchy")
 (add-to-list 'load-path "~/.emacs.d/downloaded_from_github/json-navigator")
-; (require 'json-navigator)
+(require 'json-navigator)
 
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

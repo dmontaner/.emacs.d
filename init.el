@@ -309,6 +309,27 @@
 (define-key elpy-mode-map (kbd "C-c C-b") 'elpy-shell-send-region-or-buffer)
 (define-key elpy-mode-map (kbd "C-c C-r") 'elpy-shell-send-region-or-buffer)
 
+(define-key elpy-mode-map (kbd "<backtab>") 'elpy-folding-hide-leafs)       ;; Shift + TAB --> fold all
+(define-key elpy-mode-map (kbd "<C-tab>")   'elpy-folding-toggle-at-point)  ;; Ctrl  + TAB --> fold one
+(define-key elpy-mode-map (kbd "<C-fn>")   'hs-show-all)  ;; Ctrl  + TAB --> fold one
+
+;; (defun my-total-folding ()
+;;   "Combine `elpy-folding-toggle-at-point` and `hs-show-all` in a unique function for my key bindings"
+;;   ;; hs-show-all
+;;   (handler-case (elpy-folding-hide-leafs)
+;;     (error (c) hs-show-all)
+;;     )
+;;   )
+;; (define-key elpy-mode-map (kbd "<C-tab>")   'my-total-folding)  ;; Ctrl  + TAB --> fold one
+
+;; elpy-folding--click-fringe
+;; elpy-folding--click-text
+;; elpy-folding-hide-leafs
+;; elpy-folding-toggle-at-point
+;; elpy-folding-toggle-comments
+;; elpy-folding-toggle-docstrings
+
+
 ; VER COMO HACER QUE ESTO FUNCIONE ???
 ;; (add-hook 'python-mode-hook
 ;;           (lambda ()

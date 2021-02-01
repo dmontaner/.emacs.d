@@ -101,6 +101,32 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
+;;; R & markdown : POLYMODE
+
+;; add paths
+(setq load-path
+      (append '("~/.emacs.d/downloaded_from_github/polymode/"  "~/.emacs.d/downloaded_from_github/poly-markdown")
+              load-path))
+
+;;Require any polymode bundles that you are interested in. For example:
+(require 'poly-markdown)
+
+;; R modes extensions
+(add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown-mode))
+
+;; polymode-insert-new-chunk implementation from
+;; https://github.com/vspinu/polymode/issues/123
+(defun polymode-insert-new-chunk ()
+  (interactive)
+  (insert "\n```{r}\n")
+  (save-excursion
+    (newline)
+    (insert "```\n")
+    (previous-line)))
+
+(global-set-key (kbd "M-k") 'polymode-insert-new-chunk)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; R & ESS
 
@@ -211,33 +237,6 @@
 ;; ;(define-key ess-mode-map (kbd "C-5") 'then_R_operator)
 ;; ;(define-key inferior-ess-mode-map (kbd "C-%") 'then_R_operator)
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
-;;; R & markdown : POLYMODE
-
-;; add paths
-(setq load-path
-      (append '("~/.emacs.d/downloaded_from_github/polymode/"  "~/.emacs.d/downloaded_from_github/poly-markdown")
-              load-path))
-
-;;Require any polymode bundles that you are interested in. For example:
-(require 'poly-markdown)
-
-;; R modes extensions
-(add-to-list 'auto-mode-alist '("\\.Rmd" . poly-markdown-mode))
-
-;; polymode-insert-new-chunk implementation from
-;; https://github.com/vspinu/polymode/issues/123
-(defun polymode-insert-new-chunk ()
-  (interactive)
-  (insert "\n```{r}\n")
-  (save-excursion
-    (newline)
-    (insert "```\n")
-    (previous-line)))
-
-(global-set-key (kbd "M-k") 'polymode-insert-new-chunk)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

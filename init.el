@@ -541,6 +541,12 @@
 (require 'haskell-mode-autoloads)
 (add-to-list 'Info-default-directory-list  "~/.emacs.d/downloaded_from_github/haskell-mode")
 
+(eval-after-load "haskell-mode"
+    '(define-key haskell-mode-map (kbd "C-c C-c") 'haskell-compile))
+
+(eval-after-load "haskell-cabal"
+    '(define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-compile))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; EXECUTE EXTERNAL PYTHON SCRIPT ON THE BUFFER SCRIPT

@@ -31,6 +31,7 @@ git clone https://github.com/DamienCassou/json-navigator
 git clone https://github.com/yoshiki/yaml-mode
 git clone https://github.com/politza/pdf-tools
 git clone https://github.com/dominikh/go-mode.el.git
+git clone https://github.com/haskell/haskell-mode
 
 ## ess needs a make
 ## it has this dependencies before:
@@ -45,4 +46,9 @@ curl -fsSL https://raw.githubusercontent.com/cask/cask/master/go | python
 export PATH="/home/dmontaner/.cask/bin:$PATH"  # added to my .bashrc
 make
 ln -s "$(pwd)"/server/epdfinfo ~/bin/
+cd ..
+
+## haskell needs a make
+cd haskell-mode
+make EMACS=/usr/local/bin/emacs  # path to emacs binary. See https://github.com/haskell/haskell-mode#installation-from-git-repository
 cd ..

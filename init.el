@@ -232,6 +232,12 @@
 ;; (define-key inferior-ess-r-mode-map "_" #'ess-insert-assign) will activate it in all ESS R buffers.
 (define-key ess-r-mode-map          (kbd "M-=") #'ess-insert-assign)
 (define-key inferior-ess-r-mode-map (kbd "M-=") #'ess-insert-assign)
+(ess-toggle-underscore nil)
+(define-key ess-r-mode-map          (kbd "M-_") #'ess-insert-assign)
+(define-key inferior-ess-r-mode-map (kbd "M-_") #'ess-insert-assign)
+; (define-key ess-r-mode-map "_" #'ess-insert-assign)
+; (define-key inferior-ess-r-mode-map "_" #'ess-insert-assign)
+
 
 ;; ;(define-key R-mode (kbd "M-%") 'then_R_operator)
 ;; ;(define-key ess-mode-map (kbd "C-5") 'then_R_operator)
@@ -527,6 +533,13 @@
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
 
 (setq-default tab-width 4)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; HASKELL
+(add-to-list 'load-path "~/.emacs.d/downloaded_from_github/haskell-mode")
+(require 'haskell-mode-autoloads)
+(add-to-list 'Info-default-directory-list  "~/.emacs.d/downloaded_from_github/haskell-mode")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

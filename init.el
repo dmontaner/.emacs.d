@@ -60,6 +60,12 @@
 
 (global-set-key (kbd "M-\"") 'insert-quotes-single)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;;; ORG-MODE
+;; set expanded links by default as in `org-toggle-link-display`
+;; https://emacs.stackexchange.com/a/5390/14197
+(setq org-descriptive-links nil)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

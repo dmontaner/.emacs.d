@@ -547,6 +547,14 @@
 (eval-after-load "haskell-cabal"
     '(define-key haskell-cabal-mode-map (kbd "C-c C-c") 'haskell-compile))
 
+
+;; https://haskell.github.io/haskell-mode/manual/latest/Interactive-Haskell.html
+;; To enable the minor mode which activates keybindings associated with interactive mode, use:
+(require 'haskell-interactive-mode)
+(require 'haskell-process)
+(add-hook 'haskell-mode-hook 'interactive-haskell-mode)
+
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; EXECUTE EXTERNAL PYTHON SCRIPT ON THE BUFFER SCRIPT

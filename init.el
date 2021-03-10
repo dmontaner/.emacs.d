@@ -62,25 +62,6 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;; ORG-MODE
-;; set expanded links by default as in `org-toggle-link-display`
-;; https://emacs.stackexchange.com/a/5390/14197
-(setq org-descriptive-links nil)
-
-;; EXECUTE EXTERNAL SCRIPT ON THE BUFFER FILE
-(defun runslides ()
-  "Convert Org mode or Markdown slides to PDF"
-  (interactive)
-  (message (format "Running fds-md2slides.sh %s" buffer-file-name))
-  (insert (shell-command-to-string (format "fds-md2slides.sh %s" buffer-file-name)))
-  (message "%s" "DONE fds-md2slides.sh")
-  )
-
-(global-set-key (kbd "M-L") 'runslides)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
 ;;; MY CUSTOM INSTALLED PACKAGES PACKAGES
 
 (add-to-list 'load-path "~/.emacs.d/lisp/") ;; ad one more path to the load-path variable
@@ -115,6 +96,26 @@
   )
 ;; add to hook
 (add-hook 'markdown-mode-hook 'mis-parrafos)
+
+
+;;; ORG-MODE
+;; set expanded links by default as in `org-toggle-link-display`
+;; https://emacs.stackexchange.com/a/5390/14197
+(setq org-descriptive-links nil)
+
+;; EXECUTE EXTERNAL SCRIPT ON THE BUFFER FILE
+(defun runslides ()
+  "Convert Org mode or Markdown slides to PDF"
+  (interactive)
+  (message (format "Running fds-md2slides.sh %s" buffer-file-name))
+  (shell-command-to-string (format "fds-md2slides.sh %s" buffer-file-name))
+  (message "%s" "DONE fds-md2slides.sh")
+  )
+
+(require 'org)
+(define-key org-mode-map (kbd "C-c C-b") 'runslides)
+(require 'markdown-mode)
+(define-key markdown-mode-map (kbd "C-c C-b") 'runslides)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -578,7 +579,12 @@
 ;; this is just a test
 (defun runpy ()
   (interactive)
-  (insert (shell-command-to-string (format "python3 /home/dmontaner/bin/imprime.py %s" buffer-file-name))))
+  (message (format "Running something %s" buffer-file-name))
+  (shell-command-to-string (format "python3 /home/dmontaner/bin/imprime.py %s" buffer-file-name))  ;displays output in a new buffer
+  ;; (insert (shell-command-to-string (format "python3 /home/dmontaner/bin/imprime.py %s" buffer-file-name)))  ; this inserts the output
+  ;; (shell-command (format "python3 /home/dmontaner/bin/imprime.py %s" buffer-file-name))  ;displays output in a new buffer
+  (message "%s" "DONE running")
+  )
 
 
 ;; TESTING MODE

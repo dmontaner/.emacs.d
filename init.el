@@ -67,6 +67,17 @@
 ;; https://emacs.stackexchange.com/a/5390/14197
 (setq org-descriptive-links nil)
 
+;; EXECUTE EXTERNAL SCRIPT ON THE BUFFER FILE
+(defun runslides ()
+  "Convert Org mode or Markdown slides to PDF"
+  (interactive)
+  (message (format "Running fds-md2slides.sh %s" buffer-file-name))
+  (insert (shell-command-to-string (format "fds-md2slides.sh %s" buffer-file-name)))
+  (message "%s" "DONE fds-md2slides.sh")
+  )
+
+(global-set-key (kbd "M-L") 'runslides)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 

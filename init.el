@@ -117,6 +117,9 @@
 (require 'markdown-mode)
 (define-key markdown-mode-map (kbd "C-c C-b") 'runslides)
 
+(define-key markdown-mode-map (kbd "M-<up>") 'markdown-move-up)
+(define-key markdown-mode-map (kbd "M-<down>") 'markdown-move-down)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; R & markdown : POLYMODE

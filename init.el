@@ -299,6 +299,13 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; PYTHON
+(setq load-path
+      (append '("~/.emacs.d/downloaded_from_github/py-autopep8.el/")
+	      load-path))
+(require 'py-autopep8)
+;; (add-hook 'python-mode-hook 'py-autopep8-enable-on-save)
+(setq py-autopep8-options '("--max-line-length=300"))
+
 
 ;; elpy dependency just for the configuration ??? may be I do not need it
 (setq load-path

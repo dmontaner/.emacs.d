@@ -34,6 +34,7 @@ for x in sys.path:
     print('               ', x)
 
 # np.set_printoptions(linewidth=173)
+# np.set_printoptions(threshold=sys.maxsize)
 pd.set_option('display.width', 173)
 pd.set_option('display.max_rows', 10)
 pd.set_option('display.max_columns', None)

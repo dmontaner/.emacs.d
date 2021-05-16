@@ -582,6 +582,16 @@
 (require 'haskell-process)
 (add-hook 'haskell-mode-hook 'interactive-haskell-mode)
 
+(custom-set-variables
+  '(haskell-process-suggest-remove-import-lines t)
+  '(haskell-process-auto-import-loaded-modules t)
+  '(haskell-process-log t)
+  )
+
+(define-key haskell-mode-map (kbd "C-c C-n") 'haskell-process-load-or-reload)
+;; (define-key haskell-mode-map (kbd "C-c C-b") 'haskell-process-load-file)  ; bound to something else
+;; (define-key haskell-mode-map (kbd "C-c C-r") 'haskell-process-load-file)  ; bound to something else
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

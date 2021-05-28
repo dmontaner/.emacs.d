@@ -592,6 +592,38 @@
 ;; (define-key haskell-mode-map (kbd "C-c C-b") 'haskell-process-load-file)  ; bound to something else
 ;; (define-key haskell-mode-map (kbd "C-c C-r") 'haskell-process-load-file)  ; bound to something else
 
+(defun hs_left_arrow ()
+  "insert <- "
+  (interactive)
+  (just-one-space 1)
+  (insert "<-")
+  (just-one-space 1)
+  )
+
+(defun hs_right_arrow ()
+  "insert -> "
+  (interactive)
+  (just-one-space 1)
+  (insert "->")
+  (just-one-space 1)
+  )
+
+(defun hs_right_equal_arrow ()
+  "insert => "
+  (interactive)
+  (just-one-space 1)
+  (insert "=>")
+  (just-one-space 1)
+  )
+
+(add-hook
+ 'haskell-mode-hook
+ (lambda ()
+   (local-set-key "\M-=" 'hs_left_arrow)
+   (local-set-key "\M-+" 'hs_right_arrow)
+   (local-set-key "\C-_" 'hs_right_equal_arrow)
+   )
+ )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

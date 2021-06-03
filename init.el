@@ -625,6 +625,15 @@
    )
  )
 
+(add-hook
+ 'inferior-haskell-mode-hook
+ (lambda ()
+   (local-set-key "\M-=" 'hs_left_arrow)
+   (local-set-key "\M-+" 'hs_right_arrow)
+   (local-set-key "\C-_" 'hs_right_equal_arrow)
+   )
+ )
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;; EXECUTE EXTERNAL PYTHON SCRIPT ON THE BUFFER SCRIPT

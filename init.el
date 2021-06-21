@@ -58,7 +58,8 @@
   (interactive "*P")
   (insert-pair arg ?\' ?\'))
 
-(global-set-key (kbd "M-\"") 'insert-quotes-single)
+(global-set-key (kbd "M-\'") 'insert-quotes-single)
+(global-set-key (kbd "M-\"") 'insert-quotes-double)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

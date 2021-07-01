@@ -1,6 +1,8 @@
 ;;; reload this config:
 ;;; M-x load-file ...  and press RETURN TWICE
 
+;; See this for MARKDOWN font customization https://emacs.stackexchange.com/a/42367/14197
+
 ;; FONT and THEME
 ;; custom-set-faces was added by Custom.
 ;; If you edit it by hand, you could mess it up, so be careful.

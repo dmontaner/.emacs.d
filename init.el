@@ -393,9 +393,11 @@
 ;; (setq python-shell-interpreter "python3"
 ;;       python-shell-interpreter-args "-i")
 
+;; (setq python-shell-interpreter "bpython"
+;;       python-shell-interpreter-args "-i")
+
 (setq python-shell-interpreter "ipython"
       python-shell-interpreter-args "-i --simple-prompt")
-
 
 ;(setq elpy-rpc-python-command "python2")
 ; (setq elpy-rpc-python-command "pyspark")

@@ -688,3 +688,12 @@
 ;;  ;; If there is more than one, they won't work right.
 ;;  '(tab-width 2)
 ;;  '(c-basic-offset 2))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; EDIFF vertical split and colors
+
+(custom-set-variables
+ '(ediff-window-setup-function 'ediff-setup-windows-plain)
+ '(ediff-diff-options "-w")
+ '(ediff-split-window-function 'split-window-horizontally))

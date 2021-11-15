@@ -43,8 +43,11 @@ pd.set_option('display.max_columns', None)
 
 # matplotlib.rc('figure', figsize=[40, 20], dpi=200)
 # matplotlib.rc('figure', figsize=[20, 20])
+# matplotlib.rc('figure', autolayout=True)  # plt.tight_layout() set by default
 # plt.style.use('ggplot')
 # matplotlib.rc('font', size=20)
+# matplotlib.rcParams["figure.figsize"]     # show params
+# matplotlib.rcParams["figure.autolayout"]  # show params
 
 # plotly.io.renderers.default = 'browser'
 

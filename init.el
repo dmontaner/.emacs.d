@@ -706,3 +706,13 @@
              ediff-current-diff-face-B "red")
             (make-face-italic
              ediff-current-diff-face-B)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; MongoDB
+(add-to-list 'load-path "~/.emacs.d/downloaded_from_github/inf-mongo")
+(require 'inf-mongo)
+(setq inf-mongo-command "/usr/bin/mongo 127.0.0.1:27017")
+;;; this works  also
+;; (custom-set-variables
+;;  '(inf-mongo-command "/usr/bin/mongo 127.0.0.1:27017"))

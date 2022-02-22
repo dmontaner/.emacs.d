@@ -717,3 +717,6 @@
 ;; (custom-set-variables
 ;;  '(inf-mongo-command "/usr/bin/mongo 127.0.0.1:27017"))
 (defalias 'mongo 'inf-mongo)
+
+(define-key inf-mongo-mode-map (kbd "C-c C-b") 'mongo-send-region)
+(define-key markdown-mode-map (kbd "C-c C-r") 'mongo-send-region)

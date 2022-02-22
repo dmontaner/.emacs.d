@@ -716,3 +716,4 @@
 ;;; this works  also
 ;; (custom-set-variables
 ;;  '(inf-mongo-command "/usr/bin/mongo 127.0.0.1:27017"))
+(defalias 'mongo 'inf-mongo)

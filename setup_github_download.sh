@@ -33,6 +33,7 @@ git clone https://github.com/politza/pdf-tools
 git clone https://github.com/dominikh/go-mode.el.git
 git clone https://github.com/haskell/haskell-mode
 git clone https://github.com/paetzke/py-autopep8.el.git
+git clone https://github.com/endofunky/inf-mongo.git
 
 ## ess needs a make
 ## it has this dependencies before:

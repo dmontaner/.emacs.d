@@ -18,6 +18,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 110 :width normal))))
+ '(ediff-even-diff-A ((t (:background "dark slate blue"))))
+ '(ediff-even-diff-B ((t (:background "dark slate blue"))))
+ '(ediff-odd-diff-A ((t (:background "dark blue"))))
+ '(ediff-odd-diff-B ((t (:background "dark blue"))))
  '(markdown-code-face ((t nil))))
 ; (load-theme 'leuven t) (custom-set-faces '(default ((t (:height 160))))) ;; big font white background for presentations
 
@@ -600,6 +604,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(ediff-diff-options "-w")
+ '(ediff-split-window-function (quote split-window-horizontally))
+ '(ediff-window-setup-function (quote ediff-setup-windows-plain))
  '(haskell-process-auto-import-loaded-modules t)
  '(haskell-process-log t)
  '(haskell-process-suggest-remove-import-lines t))
@@ -691,21 +698,14 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;; EDIFF vertical split and colors
-
-(custom-set-variables
- '(ediff-window-setup-function 'ediff-setup-windows-plain)
- '(ediff-diff-options "-w")
- '(ediff-split-window-function 'split-window-horizontally))
-
-(add-hook 'ediff-load-hook
-          (lambda ()
-            (set-face-foreground
-             ediff-current-diff-face-B "blue")
-            (set-face-background
-             ediff-current-diff-face-B "red")
-            (make-face-italic
-             ediff-current-diff-face-B)))
+;; (add-hook 'ediff-load-hook
+;;           (lambda ()
+;;             (set-face-foreground
+;;              ediff-current-diff-face-B "blue")
+;;             (set-face-background
+;;              ediff-current-diff-face-B "red")
+;;             (make-face-italic
+;;              ediff-current-diff-face-B)))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

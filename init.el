@@ -75,6 +75,21 @@
 (global-set-key (kbd "M-\'") 'insert-quotes-single)
 (global-set-key (kbd "M-\"") 'insert-quotes-double)
 
+(defun insert-header ()
+  "Insert header in script or file"
+  (interactive)
+  ;; # hola.py
+  ;;   # 2022-09-30 david@insg.ai
+  ;;     # from https://www.google.com/search?q=process&oq=process&aqs=chrome..69i57j35i39j69i60j69i65l3j69i60j69i61.1140j0j7&sourceid=chrome&ie=UTF-8
+  (beginning-of-buffer)
+  (insert "# " (file-name-nondirectory buffer-file-name) "\n")
+  (insert "# " (format-time-string "%Y-%m-%d") " david@insg.ai\n")
+  (insert "# \n\n")
+  ;; (previous-line)
+  ;; (move-end-of-line)
+  (backward-char 2)
+)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; MY CUSTOM INSTALLED PACKAGES PACKAGES
@@ -605,11 +620,12 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(ediff-diff-options "-w")
- '(ediff-split-window-function (quote split-window-horizontally))
- '(ediff-window-setup-function (quote ediff-setup-windows-plain))
+ '(ediff-split-window-function 'split-window-horizontally)
+ '(ediff-window-setup-function 'ediff-setup-windows-plain)
  '(haskell-process-auto-import-loaded-modules t)
  '(haskell-process-log t)
- '(haskell-process-suggest-remove-import-lines t))
+ '(haskell-process-suggest-remove-import-lines t)
+ '(large-file-warning-threshold 100000000))
 
 (define-key haskell-mode-map (kbd "C-c C-n") 'haskell-process-load-or-reload)
 ;; (define-key haskell-mode-map (kbd "C-c C-b") 'haskell-process-load-file)  ; bound to something else

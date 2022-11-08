@@ -93,6 +93,13 @@
   (make-string 80 ?X)
 )
 
+(defun insert-diary ()
+  "Insert diary title"
+  (interactive)
+  (beginning-of-buffer)
+  (insert "# " (format-time-string "%Y-%m-%d") "\n")
+)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; MY CUSTOM INSTALLED PACKAGES PACKAGES

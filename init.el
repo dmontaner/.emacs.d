@@ -632,6 +632,7 @@
  '(ediff-diff-options "-w")
  '(ediff-split-window-function 'split-window-horizontally)
  '(ediff-window-setup-function 'ediff-setup-windows-plain)
+ '(elpy-rpc-virtualenv-path "/home/dmontaner/code/2022/insig-equity/.tox/dev/bin")
  '(haskell-process-auto-import-loaded-modules t)
  '(haskell-process-log t)
  '(haskell-process-suggest-remove-import-lines t)

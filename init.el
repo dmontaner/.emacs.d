@@ -80,7 +80,7 @@
   (interactive)
   (beginning-of-buffer)
   (insert "# " (file-name-nondirectory buffer-file-name) "\n")
-  (insert "# " (format-time-string "%Y-%m-%d") " david@insg.ai\n")
+  (insert "# " (format-time-string "%Y-%m-%d") " david.montaner@gmail.com\n")
   (insert "# \n\n")
   ;; (previous-line)
   ;; (move-end-of-line)

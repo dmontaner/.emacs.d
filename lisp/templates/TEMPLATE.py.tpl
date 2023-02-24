@@ -1,5 +1,5 @@
 # (>>>FILE<<<)
-# (>>>ISO_DATE<<<) david@insg.ai
+# (>>>ISO_DATE<<<) david.montaner@gmail.com
 # (>>>COMMENT<<<)
 
 import os

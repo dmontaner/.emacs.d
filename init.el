@@ -357,14 +357,15 @@
 
 ;; all elpy dependencies
 (setq load-path
-      (append '("~/.emacs.d/downloaded_from_github/exec-path-from-shell/"
-		"~/.emacs.d/downloaded_from_github/s.el/"
-		"~/.emacs.d/downloaded_from_github/pyvenv/"
-		"~/.emacs.d/downloaded_from_github/company-mode/"
-		"~/.emacs.d/downloaded_from_github/Highlight-Indentation-for-Emacs/"
-		"~/.emacs.d/downloaded_from_github/yasnippet/"
+      (append '(
+                "~/.emacs.d/downloaded_from_github/exec-path-from-shell/"
+	            "~/.emacs.d/downloaded_from_github/s.el/"
+	            "~/.emacs.d/downloaded_from_github/pyvenv/"
+	            "~/.emacs.d/downloaded_from_github/company-mode/"
+	            "~/.emacs.d/downloaded_from_github/Highlight-Indentation-for-Emacs/"
+	            "~/.emacs.d/downloaded_from_github/yasnippet/"
                 "~/.emacs.d/downloaded_from_github/find-file-in-project/"
-		"~/.emacs.d/downloaded_from_github/elpy/")
+	            "~/.emacs.d/downloaded_from_github/elpy/")
               load-path))
 (require 'elpy)
 
@@ -373,7 +374,7 @@
 (elpy-enable)
 
 (setq elpy-rpc-backend "jedi")
-(setq elpy-rpc-python-command "python3")
+(setq elpy-rpc-python-command "python3.11")
 (setq elpy-shell-starting-directory 'current-directory) ;; If this variable is set to nil, the current directory is used as default directory when starting a Python shells.
 ; (setq elpy-shell-use-project-root nil) ;; If this variable is set to nil, the current directory is used as default directory when starting a Python shells. This variable is obsolete since 1.32.0; use ‘elpy-shell-starting-directory’ instead.
 
@@ -562,6 +563,8 @@
 ;; https://www.emacswiki.org/emacs/YamlMode
 (add-to-list 'load-path "~/.emacs.d/downloaded_from_github/yaml-mode") ;; ad one more path to the load-path variable
 (require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.ya?ml\\'" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.kv\\'" . yaml-mode))
 
 ;; (add-hook 'yaml-mode-hook
 ;;           (lambda ()
@@ -632,7 +635,7 @@
  '(ediff-diff-options "-w")
  '(ediff-split-window-function 'split-window-horizontally)
  '(ediff-window-setup-function 'ediff-setup-windows-plain)
- '(elpy-rpc-virtualenv-path "/home/dmontaner/code/2022/insig-equity/.tox/dev/bin")
+;; '(elpy-rpc-virtualenv-path "/home/dmontaner/code/2022/insig-equity/.tox/dev/bin")
  '(haskell-process-auto-import-loaded-modules t)
  '(haskell-process-log t)
  '(haskell-process-suggest-remove-import-lines t)

@@ -100,6 +100,13 @@
   (insert "# " (format-time-string "%Y-%m-%d") "\n")
 )
 
+(defun insert-hash-and-pipe ()
+  "Insert #| to be used when creating Jupyter Notebooks"
+  (interactive)
+  (insert "#| ")
+)
+(global-set-key (kbd "C-#") 'insert-hash-and-pipe)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;; MY CUSTOM INSTALLED PACKAGES PACKAGES

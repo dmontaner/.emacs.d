@@ -97,7 +97,7 @@
   "Insert diary title"
   (interactive)
   (beginning-of-buffer)
-  (insert "# " (format-time-string "%Y-%m-%d") "\n")
+  (insert "## " (format-time-string "%Y-%m-%d") "\n")
 )
 
 (defun insert-hash-and-pipe ()
@@ -106,6 +106,13 @@
   (insert "#| ")
 )
 (global-set-key (kbd "C-#") 'insert-hash-and-pipe)
+
+(defun my-init ()
+  "Open the init file"
+  (interactive)
+  (message user-init-file)
+  (find-file user-init-file)
+ )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -458,8 +465,11 @@
 ;; ;;(elpy-enable)
 ;; ;;(add-to-list 'auto-mode-alist '("\\.py\\'" . elpy-mode))  ;; no se por que necesito esto
 
-(global-set-key (kbd "C-,") 'python-indent-shift-left)
-(global-set-key (kbd "C-.") 'python-indent-shift-right)
+;; (global-set-key (kbd "C-,") 'python-indent-shift-left)
+;; (global-set-key (kbd "C-.") 'python-indent-shift-right)
+
+(global-set-key (kbd "C-,") 'elpy-nav-indent-shift-left)
+(global-set-key (kbd "C-.") 'elpy-nav-indent-shift-right)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

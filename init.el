@@ -31,7 +31,7 @@
 (setq ispell-dictionary "american")    ;; default dictionary
 ;(setq ispell-dictionary "castellano8") ;; default dictionary
 (setq inhibit-startup-message t)       ;; hide the startup message
-(menu-bar-mode -1)                     ;; disable menu bar
+; (menu-bar-mode -1)                     ;; disable menu bar
 (tool-bar-mode -1)                     ;; disable toolbar completely
 (cua-mode t)                           ;; copy paste with C-c C-v
 (defalias 'yes-or-no-p 'y-or-n-p)      ;; short yes no

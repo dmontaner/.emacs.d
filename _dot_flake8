@@ -1,12 +1,13 @@
 # python flake8 library configuration file
-# the file has to be allocated in ~/.flake8
-# I usually create a sym link for this.
+# the file is meant to be allocated in ~/.flake8
+# but it always fails if I put it in the home directory.
+# Generally I copy it to SUBFOLDERS in the home directory where I have code.
+# Also
+# DO NOT PUT COMMENTS AT THE END OF THE LINE !!!!!
+# it seems that this breaks the evaluation
 
 # List of Error Codes to ignore:
 # https://pep8.readthedocs.io/en/latest/intro.html#error-codes
-
-# DO NOT PUT COMMENTS AT THE END OF THE LINE !!!!!
-# it seems that this breaks it
 
 [flake8]
 max-line-length = 1000

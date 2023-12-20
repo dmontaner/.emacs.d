@@ -767,3 +767,10 @@
 
 (define-key inf-mongo-mode-map (kbd "C-c C-b") 'mongo-send-region)
 (define-key markdown-mode-map (kbd "C-c C-r") 'mongo-send-region)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Docker
+;; https://github.com/spotify/dockerfile-mode
+(add-to-list 'load-path "~/.emacs.d/downloaded_from_github/dockerfile-mode")
+(require 'dockerfile-mode)

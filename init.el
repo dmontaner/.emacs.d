@@ -39,7 +39,7 @@
 (column-number-mode t)
 (scroll-bar-mode -1)
 (setq ring-bell-function 'ignore)      ;; disable sound notifications
-; (global-auto-revert-mode t)            ;; auto-refresh all buffers when files have changed on disk
+(global-auto-revert-mode t)            ;; auto-refresh all buffers when files have changed on disk
 
 ;; font zoom
 ;; https://www.emacswiki.org/emacs/SetFonts#toc8
@@ -85,6 +85,26 @@
   ;; (previous-line)
   ;; (move-end-of-line)
   (backward-char 2)
+)
+
+(defun insert-pandas-header ()
+  "Insert the pandas header"
+  (interactive)
+
+  (insert "# np.set_printoptions(linewidth=173)\n")
+  (insert "# np.set_printoptions(threshold=sys.maxsize)\n")
+  (insert "pd.set_option('display.width', 173)\n")
+  (insert "pd.set_option('display.max_rows', 10)\n")
+  (insert "pd.set_option('display.max_columns', None)\n")
+  (insert "# pd.set_option('display.max_colwidth', 100)\n")
+  (insert " \n")
+  (insert "# matplotlib.rc('figure', figsize=[40, 20], dpi=200)\n")
+  (insert "# matplotlib.rc('figure', figsize=[20, 20])\n")
+  (insert "# matplotlib.rc('figure', autolayout=True)  # plt.tight_layout() set by default\n")
+  (insert "# plt.style.use('ggplot')\n")
+  (insert "# matplotlib.rc('font', size=20)\n")
+  (insert "# matplotlib.rcParams["figure.figsize"]     # show params\n")
+  (insert "# matplotlib.rcParams["figure.autolayout"]  # show params\n")
 )
 
 (defun insert-sep ()
@@ -774,3 +794,12 @@
 ;; https://github.com/spotify/dockerfile-mode
 (add-to-list 'load-path "~/.emacs.d/downloaded_from_github/dockerfile-mode")
 (require 'dockerfile-mode)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Terraform
+;; https://github.com/hcl-emacs/terraform-mode
+(add-to-list 'load-path "~/.emacs.d/downloaded_from_github/hcl-mode")
+(add-to-list 'load-path "~/.emacs.d/downloaded_from_github/dash.el")
+(add-to-list 'load-path "~/.emacs.d/downloaded_from_github/terraform-mode")
+(require 'terraform-mode)

@@ -1,14 +1,7 @@
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(inhibit-startup-screen t))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-;; do not save backups
-(setq make-backup-files nil)
+(setq inhibit-startup-message t)   ;; Hide the startup message
+(setq ring-bell-function 'ignore)  ;; Disable sound notifications
+(setq make-backup-files nil)       ;; Stop creating backup~ files
+(setq auto-save-default nil)       ;; Stop creating #autosave# files
+(defalias 'yes-or-no-p 'y-or-n-p)  ;; short yes no
+(setq-default indent-tabs-mode nil)  ;; use spaces instead of tabs when indenting
+(column-number-mode t)

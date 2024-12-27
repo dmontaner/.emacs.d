@@ -258,3 +258,23 @@ or insert 2 double quotes and leave cursor in the middle."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages '(dockerfile-mode lsp-mode load-env-vars gptel elpy)))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; NEO4J
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defun neo4j-shell ()
+  "Start cypher-shell in a new Shell buffer."
+  (interactive)
+  ; (let ((default-directory "~/"))       ; Optional: Set a starting directory if needed
+  (let ((current-dir default-directory))  ; Get the current working directory
+    (shell "*cypher-shell*")              ; Create a new shell buffer named "*cypher-shell*"
+    (comint-send-string "*cypher-shell*" "cypher-shell\n")))  ; Send the command to the shell
+
+(defun neo4j-eshell ()
+  "Start cypher-shell in a new EShell buffer."
+  (interactive)
+  (eshell)
+  (insert "cypher-shell\n")  ;; Automatically run the command after EShell starts
+  (eshell-send-input))

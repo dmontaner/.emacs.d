@@ -111,8 +111,12 @@
   (setq python-indent-offset 4)
   (setq python-indent-guess-indent-offset-verbose nil)) ;; disable indentation guess message
 
+(setq elpy-rpc-autoinstall nil)
+
 (setq python-shell-interpreter "ipython"
       python-shell-interpreter-args "-i --simple-prompt")
+
+;; (setq python-shell-interpreter "python")
 
 (add-hook 'python-mode-hook 'hs-minor-mode) ;; Enable code folding in Python
 

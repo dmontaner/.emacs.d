@@ -27,7 +27,7 @@
 (setq ispell-dictionary "american")
 ;; (setq ispell-dictionary "castellano8")
 
-;; (global-auto-revert-mode t)  ;; auto-refresh all buffers when files have changed on disk
+(global-auto-revert-mode t)  ;; auto-refresh all buffers when files have changed on disk
 
 ;; (menu-bar-mode -1)                 ;; disable menu bar
 (tool-bar-mode -1)                    ;; disable toolbar completely
@@ -96,6 +96,18 @@
   :ensure t)
 
 
+;; YAML
+(use-package yaml-mode
+  :ensure t)
+
+;; TERRAFORM
+(use-package hcl-mode
+  :ensure t)
+(use-package terraform-mode
+  :ensure t)
+
+
+
 ;; PYTHON
 ;; (use-package lsp-mode
 ;;   :ensure t
@@ -119,6 +131,18 @@
 ;; (setq python-shell-interpreter "python")
 
 (add-hook 'python-mode-hook 'hs-minor-mode) ;; Enable code folding in Python
+
+;; (defun my-elpy-shell-send-statement-and-step (&rest args)
+;;   "Send statement to the Python shell without switching windows."
+;;   (interactive)
+;;   (save-window-excursion
+;;     (apply 'elpy-shell-send-statement-and-step args)))
+
+;; (define-key elpy-mode-map (kbd "C-c C-n")
+;;   (lambda ()
+;;     (interactive)
+;;     (save-excursion (elpy-shell-send-statement-and-step))))
+
 
 ;; Keybindings for elpy
 (define-key elpy-mode-map (kbd "C-c C-n") 'elpy-shell-send-statement-and-step)
@@ -262,7 +286,7 @@ or insert 2 double quotes and leave cursor in the middle."
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(cypher-mode dockerfile-mode lsp-mode load-env-vars gptel elpy)))
+   '(terraform-mode yaml-mode elpygen cypher-mode dockerfile-mode lsp-mode load-env-vars gptel elpy)))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -123,8 +123,26 @@
   (setq python-indent-offset 4)
   (setq python-indent-guess-indent-offset-verbose nil)) ;; disable indentation guess message
 
-(setq elpy-rpc-autoinstall nil)
 
+;; Backend Python (Elpy RPC Interpreter)
+;; This interpreter is used internally by Elpy to provide IDE-like features
+;; such as code completion, linting, and refactoring.
+(setq elpy-rpc-python-command "/usr/bin/python3.11")
+
+;; (setq elpy-rpc-autoinstall nil)
+(setq elpy-rpc-autoinstall t)
+
+
+;; This solves the Warning (python):
+;; Your `python-shell-interpreter` doesn`t seem to support readline,
+;; yet `python-shell-completion-native-enable` was t and "ipython"
+;; is not part of the `python-shell-completion-native-disabled-interpreters`
+;;list. Native completions have been disabled locally.
+(setq python-shell-completion-native-enable nil)
+
+;; Interactive Python Shell (REPL)
+;; This interpreter is what you interact with directly when running Python code within Emacs,
+;; such as when executing a script or entering commands in a REPL.
 (setq python-shell-interpreter "ipython"
       python-shell-interpreter-args "-i --simple-prompt")
 

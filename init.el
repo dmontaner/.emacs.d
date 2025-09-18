@@ -114,6 +114,10 @@
 ;;   :hook (python-mode . lsp-deferred)
 ;;   :commands (lsp lsp-deferred))
 
+;; (use-package lsp-pyright
+;;   :ensure t
+;;   :hook (python-mode . lsp))
+
 (use-package elpy
   :ensure t
   :init
@@ -305,6 +309,13 @@ or insert 2 double quotes and leave cursor in the middle."
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    '(terraform-mode yaml-mode elpygen cypher-mode dockerfile-mode lsp-mode load-env-vars gptel elpy)))
+
+;; I am trying the region not to be closed after "M-;" but cannot make it work.
+;; I tried this 2 aproaches
+;; (global-set-key (kbd "M-;") #'comment-line)
+;; (put 'comment-line 'deactivate-mark nil)
+;;
+;; (put 'comment-dwim 'deactivate-mark nil) ;; keep the region active after you run M-;.
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

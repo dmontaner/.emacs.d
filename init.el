@@ -23,8 +23,18 @@
  '(mode-line-buffer-id ((t (:background unspecified :foreground unspecified)))))
 
 
+;; FIX YELLOW HIGHLIGHTS
+;; the IPython traceback is outputting ANSI color escape codes that say "background = yellow,"
+;; and ansi-color in Emacs is translating that into an overlay with that background.
+;; Used describe-char to explore this
+(setq ansi-color-normal-colors-vector
+      [ansi-color-black ansi-color-red ansi-color-green
+       ansi-color-black ;; override “yellow” to black
+       ansi-color-blue ansi-color-magenta ansi-color-cyan ansi-color-white])
+
 ;; BASIC CUSTOMIZATION
 (setq ispell-dictionary "american")
+;; (setq ispell-dictionary "british")
 ;; (setq ispell-dictionary "castellano8")
 
 (global-auto-revert-mode t)  ;; auto-refresh all buffers when files have changed on disk
@@ -301,7 +311,7 @@ or insert 2 double quotes and leave cursor in the middle."
 (global-set-key (kbd "M-\"") 'insert-quotes-double)
 
 (global-set-key (kbd "C-#") 'insert-sep)
-;(global-set-key (kbd "C-|") 'insert-hash-and-pipe)
+(global-set-key (kbd "C-|") 'insert-hash-and-pipe)
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

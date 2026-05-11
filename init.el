@@ -76,17 +76,17 @@
 (package-initialize)
 
 
-;; GPTEL
-;; Load environment variables (getenv)
-(use-package load-env-vars
-  :ensure t
-  :config
-  (load-env-vars "~/.env"))
+;; ;; GPTEL
+;; ;; Load environment variables (getenv)
+;; (use-package load-env-vars
+;;   :ensure t
+;;   :config
+;;   (load-env-vars "~/.env"))
 
-(use-package gptel
-  :ensure t
-  :config
-  (setq gptel-api-key (getenv "OPENAI_API_KEY")))
+;; (use-package gptel
+;;   :ensure t
+;;   :config
+;;   (setq gptel-api-key (getenv "OPENAI_API_KEY")))
 
 
 ;; MARKDOWN

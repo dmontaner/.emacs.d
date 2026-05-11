@@ -141,7 +141,7 @@
 ;; Backend Python (Elpy RPC Interpreter)
 ;; This interpreter is used internally by Elpy to provide IDE-like features
 ;; such as code completion, linting, and refactoring.
-(setq elpy-rpc-python-command "/usr/bin/python3.11")
+(setq elpy-rpc-python-command "python3")
 
 ;; (setq elpy-rpc-autoinstall nil)
 (setq elpy-rpc-autoinstall t)
@@ -157,7 +157,7 @@
 ;; Interactive Python Shell (REPL)
 ;; This interpreter is what you interact with directly when running Python code within Emacs,
 ;; such as when executing a script or entering commands in a REPL.
-(setq python-shell-interpreter "ipython"
+(setq python-shell-interpreter "/home/dmontaner/.venvs/general/bin/ipython"
       python-shell-interpreter-args "-i --simple-prompt")
 
 ;; (setq python-shell-interpreter "python")

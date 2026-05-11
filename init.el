@@ -7,3 +7,6 @@
 (column-number-mode t)	            ;; include column number
 (menu-bar-mode -1)                  ;; disable menu bar (File, Edit, View...)
 (tool-bar-mode -1)                  ;; disable toolbar completely (Open, Save, Undo...)
+(global-auto-revert-mode t)         ;; automatically reloads files changed on disk
+(cua-mode t)                        ;; enables C-x, C-c, C-v for cut/copy/paste
+(setq cua-enable-cua-keys nil)      ;; but keep standard C-x/C-c for Emacs

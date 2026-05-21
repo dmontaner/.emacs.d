@@ -111,8 +111,6 @@
   :ensure t)
 
 ;; TERRAFORM
-(use-package hcl-mode
-  :ensure t)
 (use-package terraform-mode
   :ensure t)
 
@@ -159,6 +157,9 @@
 ;; such as when executing a script or entering commands in a REPL.
 (setq python-shell-interpreter "/home/dmontaner/.venvs/general/bin/ipython"
       python-shell-interpreter-args "-i --simple-prompt")
+
+;; (setq python-shell-interpreter "/home/dmontaner/code_sme/data/lambda-functions/exam-paper-downloader/.venv/bin/ipython"
+;;       python-shell-interpreter-args "-i --simple-prompt")
 
 ;; (setq python-shell-interpreter "python")
 
@@ -244,7 +245,7 @@ or insert 2 double quotes and leave cursor in the middle."
 (defun insert-header ()
   "Insert a header in script or file."
   (interactive)
-  (beginning-of-buffer)
+  (goto-char (point-min))
   (insert "# " (file-name-nondirectory buffer-file-name) "\n")
   (insert "# " (format-time-string "%Y-%m-%d") " david.montaner@gmail.com\n")
   (insert "# \n\n")
@@ -274,13 +275,13 @@ or insert 2 double quotes and leave cursor in the middle."
 (defun insert-sep ()
   "Insert line of hash"
   (interactive)
-  (make-string 80 ?X)
+  (insert (make-string 80 ?#))
 )
 
 (defun insert-diary ()
   "Insert diary title"
   (interactive)
-  (beginning-of-buffer)
+  (goto-char (point-min))
   (insert "## " (format-time-string "%Y-%m-%d") "\n")
 )
 

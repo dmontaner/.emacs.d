@@ -4,7 +4,7 @@
 ;; (load-theme 'wombat t) (set-cursor-color "#ffffff") ;; white cursor. Needs to be set AFTER loading the theme.
 ;; (load-theme 'deeper-blue t) (custom-set-faces '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 110 :width normal)))))
 
-;; (load-theme 'leuven t) (custom-set-faces '(default ((t (:height 160))))) ;; big font white background for presentations
+;; (load-theme 'leuvinsen t) (custom-set-faces '(default ((t (:height 160))))) ;; big font white background for presentations
 
 (load-theme 'deeper-blue t)
 (set-cursor-color "#bb1515") ;; red cursor color
@@ -222,8 +222,8 @@ or insert 2 double quotes and leave cursor in the middle."
 
 
 (defun insert-quotes-single (&optional arg)
-  "Enclose following ARG sexps in double quotes and move cursor to the end
-or insert 2 double quotes and leave cursor in the middle."
+  "Enclose following ARG sexps in single quotes and move cursor to the end
+or insert 2 single quotes and leave cursor in the middle."
   (interactive "*P")
   (let ((avance 0)) ;; Initialize `avance` to 0
     (when (use-region-p) ;; Check if a region is selected
@@ -231,6 +231,25 @@ or insert 2 double quotes and leave cursor in the middle."
     (insert-pair arg ?\' ?\') ;; Enclose in quotes
     (forward-char avance))) ;; Move cursor past the inserted quotes and selected text
 
+(defun insert-squared-brackets (&optional arg)
+  "Enclose following ARG sexps in squared brackets and move cursor to the end
+or insert 2 squared brackets and leave cursor in the middle."
+  (interactive "*P")
+  (let ((avance 0)) ;; Initialize `avance` to 0
+    (when (use-region-p) ;; Check if a region is selected
+      (setq avance (+ 1 (abs (- (region-end) (region-beginning)))))) ;; Calculate region length
+    (insert-pair arg ?\[ ?\])
+    (forward-char avance))) ;; Move cursor past the inserted quotes and selected text
+
+(defun insert-curly-brackets (&optional arg)
+  "Enclose following ARG sexps in curly brackets and move cursor to the end
+or insert 2 curly brackets and leave cursor in the middle."
+  (interactive "*P")
+  (let ((avance 0)) ;; Initialize `avance` to 0
+    (when (use-region-p) ;; Check if a region is selected
+      (setq avance (+ 1 (abs (- (region-end) (region-beginning)))))) ;; Calculate region length
+    (insert-pair arg ?{ ?})
+    (forward-char avance))) ;; Move cursor past the inserted quotes and selected text
 
 (defun region ()
   "Display the beginning and end positions of the active region in a message."
@@ -310,6 +329,8 @@ or insert 2 double quotes and leave cursor in the middle."
 ;; KEY BINDINGS to my own functions
 (global-set-key (kbd "M-\'") 'insert-quotes-single)
 (global-set-key (kbd "M-\"") 'insert-quotes-double)
+(global-set-key (kbd "M-[") 'insert-squared-brackets)
+(global-set-key (kbd "M-{") 'insert-curly-brackets)
 
 (global-set-key (kbd "C-#") 'insert-sep)
 (global-set-key (kbd "C-|") 'insert-hash-and-pipe)

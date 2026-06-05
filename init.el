@@ -155,13 +155,10 @@
 ;; Interactive Python Shell (REPL)
 ;; This interpreter is what you interact with directly when running Python code within Emacs,
 ;; such as when executing a script or entering commands in a REPL.
+;; (setq python-shell-interpreter "python")
 (setq python-shell-interpreter "/home/dmontaner/.venvs/general/bin/ipython"
       python-shell-interpreter-args "-i --simple-prompt")
 
-;; (setq python-shell-interpreter "/home/dmontaner/code_sme/data/lambda-functions/exam-paper-downloader/.venv/bin/ipython"
-;;       python-shell-interpreter-args "-i --simple-prompt")
-
-;; (setq python-shell-interpreter "python")
 
 (add-hook 'python-mode-hook 'hs-minor-mode) ;; Enable code folding in Python
 
